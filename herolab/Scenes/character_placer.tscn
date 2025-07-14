@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8bjpkljedqwe"]
+
+[ext_resource type="Texture2D" uid="uid://df5jt6lgx2wbi" path="res://ArtWork/Sprites/UI - Front/blank2.png" id="1_bc7r0"]
+[ext_resource type="Script" uid="uid://btdcthhe4lyb8" path="res://Scripts/character_placer.gd" id="1_gwtbq"]
+[ext_resource type="Texture2D" uid="uid://bo3coeggsy8q7" path="res://ArtWork/Sprites/UI - Front/add2.png" id="3_h2sqk"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_8hdmk"]
+
+[node name="CharacterPlacer" type="Control"]
+layout_mode = 3
+anchor_right = 0.523
+anchor_bottom = 0.345
+offset_right = -203.965
+offset_bottom = -227.65
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+script = ExtResource("1_gwtbq")
+blank = ExtResource("1_bc7r0")
+add = ExtResource("3_h2sqk")
+
+[node name="Sprite" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 38.0
+texture_normal = ExtResource("1_bc7r0")
+
+[node name="ItemSprite" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 38.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="FileDialog" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+initial_position = 2
+size = Vector2i(353, 490)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8hdmk")
+pitch_scale = 15.65
+
+[connection signal="mouse_entered" from="Sprite" to="." method="_on_sprite_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite" to="." method="_on_sprite_mouse_exited"]
+[connection signal="pressed" from="Sprite" to="." method="_on_sprite_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

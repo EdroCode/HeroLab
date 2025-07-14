@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://3h6vw02yddbi"]
+
+[ext_resource type="Script" uid="uid://d4fqfarp0iocr" path="res://Scripts/Complementary/trevo.gd" id="1_r3fsx"]
+[ext_resource type="Texture2D" uid="uid://pe0p1mk63tyo" path="res://ArtWork/Sprites/Addons/trevo_on.png" id="2_w4nou"]
+[ext_resource type="Texture2D" uid="uid://c0tkwd66ylfds" path="res://ArtWork/Sprites/Addons/trevo_off.png" id="3_sj3hx"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_fsmy4"]
+
+[node name="trevo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3fsx")
+textura_ligada = ExtResource("2_w4nou")
+textura_desligada = ExtResource("3_sj3hx")
+
+[node name="TrevoButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fsmy4")
+
+[connection signal="button_down" from="TrevoButton" to="." method="_on_trevo_button_button_down"]

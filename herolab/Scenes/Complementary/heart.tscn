@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmnkou8016y1a"]
+
+[ext_resource type="Texture2D" uid="uid://cf7lv8q2q22q3" path="res://ArtWork/Sprites/Addons/Untitled 07-13-2025 05-48-16 (1).png" id="1_452e1"]
+[ext_resource type="Script" uid="uid://b4d5khweqj6sl" path="res://Scripts/Complementary/heart.gd" id="1_v4aiu"]
+[ext_resource type="Texture2D" uid="uid://cljlbwmg2g8t6" path="res://ArtWork/Sprites/Addons/Untitled 07-13-2025 05-48-16 (3).png" id="3_jgxw8"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_wgne6"]
+
+[sub_resource type="Animation" id="Animation_qkgsw"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeartSprite:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_d8mca"]
+resource_name = "Pulse"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeartSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.02, 3.02),
+"transitions": PackedFloat32Array(1, 1.07177, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_wgne6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeartSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeartSprite:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wgne6"]
+_data = {
+&"Idle": SubResource("Animation_qkgsw"),
+&"Pulse": SubResource("Animation_d8mca"),
+&"RESET": SubResource("Animation_wgne6")
+}
+
+[node name="Heart" type="Control"]
+layout_mode = 3
+anchor_right = 0.07
+anchor_bottom = 0.083
+offset_right = 0.299999
+offset_bottom = 0.0899963
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4aiu")
+textura_ligada = ExtResource("1_452e1")
+textura_desligada = ExtResource("3_jgxw8")
+
+[node name="HeartSprite" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 74.0
+offset_bottom = 74.0
+pivot_offset = Vector2(32, 32)
+texture_normal = ExtResource("3_jgxw8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wgne6")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wgne6")
+pitch_scale = 0.6
+
+[connection signal="button_down" from="HeartSprite" to="." method="_on_heart_sprite_button_down"]

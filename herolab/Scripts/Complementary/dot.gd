@@ -1,0 +1,14 @@
+extends TextureButton
+
+@export var color : Color
+
+var painted = false
+
+
+func _on_button_down() -> void:
+	
+	if !painted:
+		modulate = color
+	else:
+		modulate = Color(1.0, 1.0, 1.0)
+	painted = !painted

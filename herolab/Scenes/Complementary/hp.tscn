@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://c10so7g26wvvn"]
+
+[ext_resource type="Texture2D" uid="uid://cj3uvw4dgeqgy" path="res://ArtWork/Sprites/UI - Front/hp_blank.png" id="1_hqjsl"]
+[ext_resource type="PackedScene" uid="uid://ce4n56sa1esp0" path="res://Scenes/Complementary/dot.tscn" id="2_lt7up"]
+
+[node name="HP" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -434.0
+offset_bottom = -763.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+
+[node name="HPBlank" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 17.0
+offset_bottom = 7.0
+texture = ExtResource("1_hqjsl")
+
+[node name="Dot" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 2.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot2" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 1.0
+offset_right = 12.0
+offset_bottom = 2.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot3" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 1.0
+offset_right = 14.0
+offset_bottom = 2.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot4" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 1.0
+offset_right = 16.0
+offset_bottom = 2.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot5" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 10.0
+offset_bottom = 4.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot6" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 12.0
+offset_bottom = 4.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot7" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 14.0
+offset_bottom = 4.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot8" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 3.0
+offset_right = 16.0
+offset_bottom = 4.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot9" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 10.0
+offset_bottom = 6.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot10" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 12.0
+offset_bottom = 6.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot11" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 14.0
+offset_bottom = 6.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)
+
+[node name="Dot12" parent="." instance=ExtResource("2_lt7up")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 16.0
+offset_bottom = 6.0
+color = Color(3.82639e-06, 0.657962, 1.15514e-06, 1)

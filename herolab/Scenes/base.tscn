@@ -1,0 +1,442 @@
+[gd_scene load_steps=18 format=3 uid="uid://3c47n7hfvkwm"]
+
+[ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
+[ext_resource type="PackedScene" uid="uid://rsjoqhyv04p0" path="res://Scenes/Complementary/star.tscn" id="2_1w1q6"]
+[ext_resource type="PackedScene" uid="uid://3h6vw02yddbi" path="res://Scenes/Complementary/trevo.tscn" id="3_6qyon"]
+[ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="4_48and"]
+[ext_resource type="PackedScene" uid="uid://cv443d8gl0owa" path="res://Scenes/item_placer.tscn" id="4_jdayy"]
+[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/AbacaxiPixels.ttf" id="5_8nfiu"]
+[ext_resource type="PackedScene" uid="uid://b8bjpkljedqwe" path="res://Scenes/character_placer.tscn" id="6_e4po7"]
+[ext_resource type="PackedScene" uid="uid://vcx8ogn44hnl" path="res://Scenes/Complementary/attack.tscn" id="8_3v5je"]
+[ext_resource type="PackedScene" uid="uid://0u025hosng0h" path="res://Scenes/Complementary/defense.tscn" id="9_du40w"]
+[ext_resource type="PackedScene" uid="uid://c10so7g26wvvn" path="res://Scenes/Complementary/hp.tscn" id="10_omojh"]
+[ext_resource type="Texture2D" uid="uid://b02sirdneiwy7" path="res://ArtWork/Sprites/UI - Back/empty.png" id="11_omojh"]
+[ext_resource type="Texture2D" uid="uid://cgfh0okrb2biu" path="res://ArtWork/Sprites/UI - Front/ATACAR.png" id="12_kgqh3"]
+[ext_resource type="PackedScene" uid="uid://bmnkou8016y1a" path="res://Scenes/Complementary/heart.tscn" id="12_yoopj"]
+[ext_resource type="Script" uid="uid://bcj146uus5in7" path="res://Scripts/GameManager/save.gd" id="12_yv4wf"]
+[ext_resource type="Texture2D" uid="uid://bfvb74c7pgs54" path="res://ArtWork/Sprites/UI - Front/magia.png" id="13_1dbbu"]
+[ext_resource type="Script" uid="uid://bkjj7kf8s8lum" path="res://Scripts/GameManager/load.gd" id="13_h12cx"]
+[ext_resource type="Texture2D" uid="uid://dpcdm746bp2qw" path="res://ArtWork/Sprites/UI - Front/FUGIR.png" id="14_yv4wf"]
+
+[node name="Base" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sheet" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.525275
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1w1q6")
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="UpperBar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 454.0
+offset_bottom = 70.0
+
+[node name="StarBar" type="Control" parent="UpperBar"]
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 294.0
+offset_bottom = 72.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UpperBar/StarBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -17.0
+offset_right = 15.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="Star" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("2_1w1q6")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star2" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("2_1w1q6")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star3" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("2_1w1q6")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star4" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("2_1w1q6")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star5" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("2_1w1q6")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TrevoBar" type="Control" parent="UpperBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UpperBar/TrevoBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 16.0
+offset_right = -6.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="trevo" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("3_6qyon")]
+layout_mode = 2
+
+[node name="trevo2" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("3_6qyon")]
+layout_mode = 2
+
+[node name="trevo3" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("3_6qyon")]
+layout_mode = 2
+
+[node name="StatsPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LevelInput" type="LineEdit" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 86.0
+offset_right = 469.0
+offset_bottom = 126.0
+theme = ExtResource("4_48and")
+text = "01"
+max_length = 2
+flat = true
+
+[node name="NameInput" type="LineEdit" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 86.0
+offset_right = 254.0
+offset_bottom = 126.0
+theme = ExtResource("4_48and")
+placeholder_text = "@ ABACAXI"
+flat = true
+
+[node name="LV" type="RichTextLabel" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 88.0
+offset_right = 357.0
+offset_bottom = 128.0
+theme_override_fonts/normal_font = ExtResource("5_8nfiu")
+theme_override_font_sizes/normal_font_size = 32
+text = "LV
+"
+
+[node name="CharacterData" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 133.0
+offset_right = 455.0
+offset_bottom = 518.0
+
+[node name="ItemPlacer" parent="CharacterData" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 301.0
+offset_top = 42.0
+offset_right = 205.07
+offset_bottom = -13.825
+
+[node name="ItemPlacer2" parent="CharacterData" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 301.0
+offset_top = 168.0
+offset_right = 205.07
+offset_bottom = 112.175
+
+[node name="CharacterPlacer" parent="CharacterData" instance=ExtResource("6_e4po7")]
+layout_mode = 1
+offset_left = 28.0
+offset_top = 28.0
+offset_right = -175.965
+offset_bottom = -104.825
+
+[node name="Stats" type="Control" parent="CharacterData"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Attack" parent="CharacterData/Stats" instance=ExtResource("8_3v5je")]
+layout_mode = 1
+offset_left = 21.0
+offset_top = 11.0
+offset_right = 21.0
+offset_bottom = 11.0
+
+[node name="Defense" parent="CharacterData/Stats" instance=ExtResource("9_du40w")]
+layout_mode = 1
+offset_left = 175.0
+offset_top = 11.0
+offset_right = -259.0
+offset_bottom = -70.0
+
+[node name="HP" parent="CharacterData/Stats" instance=ExtResource("10_omojh")]
+layout_mode = 1
+offset_left = 315.0
+offset_top = 11.0
+offset_right = -119.0
+offset_bottom = -70.0
+
+[node name="Inventory" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 518.0
+offset_right = 455.0
+offset_bottom = 770.0
+
+[node name="Items" type="Control" parent="Inventory"]
+anchors_preset = 0
+offset_right = 378.0
+offset_bottom = 252.0
+
+[node name="ItemPlacer" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 5.27002
+offset_right = 4.16
+offset_bottom = -0.529981
+
+[node name="ItemPlacer2" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 133.0
+offset_top = 5.27002
+offset_right = 123.16
+offset_bottom = -0.529981
+
+[node name="ItemPlacer3" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 252.0
+offset_top = 5.27002
+offset_right = 242.16
+offset_bottom = -0.529981
+
+[node name="ItemPlacer4" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 124.27
+offset_right = 4.16
+offset_bottom = 118.47
+
+[node name="ItemPlacer5" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 133.0
+offset_top = 124.27
+offset_right = 123.16
+offset_bottom = 118.47
+
+[node name="ItemPlacer6" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
+layout_mode = 1
+offset_left = 252.0
+offset_top = 124.27
+offset_right = 242.16
+offset_bottom = 118.47
+
+[node name="Money" type="Control" parent="Inventory"]
+anchors_preset = 0
+offset_left = 373.0
+offset_right = 454.0
+offset_bottom = 252.0
+
+[node name="RS" type="RichTextLabel" parent="Inventory/Money"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 17.0
+offset_right = 72.0
+offset_bottom = 57.0
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/normal_font = ExtResource("5_8nfiu")
+theme_override_font_sizes/normal_font_size = 32
+text = "RS
+"
+
+[node name="MoneyInput" type="TextEdit" parent="Inventory/Money"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 88.0
+offset_right = 52.0
+offset_bottom = 238.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+text = "000"
+wrap_mode = 1
+autowrap_mode = 1
+
+[node name="SidePanel" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 448.0
+offset_right = 910.0
+offset_bottom = 770.0
+
+[node name="Blank" type="TextureRect" parent="SidePanel"]
+modulate = Color(0.878431, 0.176471, 1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_omojh")
+
+[node name="ColorRect" type="ColorRect" parent="SidePanel"]
+layout_mode = 0
+offset_right = 455.0
+offset_bottom = 69.0
+color = Color(0, 0, 0, 1)
+
+[node name="save" type="Button" parent="SidePanel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 120.0
+offset_bottom = 52.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+text = "SAVE"
+flat = true
+script = ExtResource("12_yv4wf")
+
+[node name="load" type="Button" parent="SidePanel"]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 12.0
+offset_right = 428.0
+offset_bottom = 52.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+text = "LOAD"
+flat = true
+script = ExtResource("13_h12cx")
+
+[node name="Options" type="Control" parent="SidePanel"]
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 486.0
+offset_right = 455.0
+offset_bottom = 771.0
+
+[node name="Atacar" type="TextureRect" parent="SidePanel/Options"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 28.0
+offset_right = 92.0
+offset_bottom = 44.0
+scale = Vector2(2.71028, 2.71028)
+texture = ExtResource("12_kgqh3")
+stretch_mode = 2
+
+[node name="Magia" type="TextureRect" parent="SidePanel/Options"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 28.0
+offset_right = 308.0
+offset_bottom = 68.0
+scale = Vector2(2.71028, 2.71028)
+texture = ExtResource("13_1dbbu")
+stretch_mode = 2
+
+[node name="Fugir" type="TextureRect" parent="SidePanel/Options"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 89.0
+offset_right = 199.0
+offset_bottom = 129.0
+scale = Vector2(2.71028, 2.71028)
+texture = ExtResource("14_yv4wf")
+stretch_mode = 2
+
+[node name="Hearts" type="Control" parent="SidePanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 48.0
+offset_bottom = 193.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SidePanel/Hearts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 38.0
+offset_right = -157.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+theme_override_constants/separation = 55
+
+[node name="Heart" parent="SidePanel/Hearts/HBoxContainer" instance=ExtResource("12_yoopj")]
+layout_mode = 2
+
+[node name="Heart2" parent="SidePanel/Hearts/HBoxContainer" instance=ExtResource("12_yoopj")]
+layout_mode = 2
+
+[node name="Heart3" parent="SidePanel/Hearts/HBoxContainer" instance=ExtResource("12_yoopj")]
+layout_mode = 2
+
+[node name="Heart4" parent="SidePanel/Hearts/HBoxContainer" instance=ExtResource("12_yoopj")]
+layout_mode = 2
+
+[node name="Heart5" parent="SidePanel/Hearts/HBoxContainer" instance=ExtResource("12_yoopj")]
+layout_mode = 2
+
+[node name="Credits" type="RichTextLabel" parent="SidePanel"]
+modulate = Color(1, 1, 1, 0.32549)
+layout_mode = 0
+offset_left = 340.0
+offset_top = 727.0
+offset_right = 620.0
+offset_bottom = 767.0
+scale = Vector2(1.2, 1.2)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_8nfiu")
+theme_override_font_sizes/normal_font_size = 32
+text = "EDRO
+"
+
+[node name="CharacterPlacer" parent="SidePanel" instance=ExtResource("6_e4po7")]
+layout_mode = 1
+offset_left = 107.0
+offset_top = 209.0
+offset_right = -96.965
+offset_bottom = -18.65
+
+[connection signal="mouse_entered" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_exited"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://rsjoqhyv04p0"]
+
+[ext_resource type="Script" uid="uid://bful87rj4887f" path="res://Scripts/Complementary/Star.gd" id="1_3vu41"]
+[ext_resource type="Texture2D" uid="uid://bsvti0sujasap" path="res://ArtWork/Sprites/Addons/star_on.png" id="2_1a88l"]
+[ext_resource type="Texture2D" uid="uid://wdwpllfeb3ud" path="res://ArtWork/Sprites/Addons/star_off.png" id="2_fwpdb"]
+[ext_resource type="AudioStream" uid="uid://ukuigrdsypve" path="res://ArtWork/SFX/shine-1-268902.mp3" id="4_rnel3"]
+
+[node name="Star" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -407.0
+offset_bottom = -729.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3vu41")
+textura_ligada = ExtResource("2_1a88l")
+textura_desligada = ExtResource("2_fwpdb")
+
+[node name="StarButton" type="TextureButton" parent="."]
+layout_mode = 0
+texture_normal = ExtResource("2_1a88l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rnel3")
+
+[connection signal="button_down" from="StarButton" to="." method="_on_star_button_down"]

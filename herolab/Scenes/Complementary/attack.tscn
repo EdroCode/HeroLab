@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://vcx8ogn44hnl"]
+
+[ext_resource type="Texture2D" uid="uid://codn560q6i317" path="res://ArtWork/Sprites/UI - Front/attack_blank.png" id="1_ij4ji"]
+[ext_resource type="PackedScene" uid="uid://ce4n56sa1esp0" path="res://Scenes/Complementary/dot.tscn" id="2_ht1lw"]
+
+[node name="Attack" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -434.0
+offset_bottom = -763.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+
+[node name="AttackBlank" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 7.0
+texture = ExtResource("1_ij4ji")
+
+[node name="Dot" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 1.0
+offset_right = 14.0
+offset_bottom = 2.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot2" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 1.0
+offset_right = 16.0
+offset_bottom = 2.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot3" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 1.0
+offset_right = 18.0
+offset_bottom = 2.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot4" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 1.0
+offset_right = 20.0
+offset_bottom = 2.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot5" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 14.0
+offset_bottom = 4.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot6" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 3.0
+offset_right = 16.0
+offset_bottom = 4.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot7" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 3.0
+offset_right = 18.0
+offset_bottom = 4.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot8" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 4.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot9" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 14.0
+offset_bottom = 6.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot10" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 16.0
+offset_bottom = 6.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot11" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 18.0
+offset_bottom = 6.0
+color = Color(0.854902, 0, 0, 1)
+
+[node name="Dot12" parent="." instance=ExtResource("2_ht1lw")]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 5.0
+offset_right = 20.0
+offset_bottom = 6.0
+color = Color(0.854902, 0, 0, 1)

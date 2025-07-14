@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce4n56sa1esp0"]
+
+[ext_resource type="Texture2D" uid="uid://demupb720pac6" path="res://ArtWork/Sprites/UI - Front/dot.png" id="1_7ilwh"]
+[ext_resource type="Script" uid="uid://dua45rate3gvb" path="res://Scripts/Complementary/dot.gd" id="2_wye70"]
+
+[node name="Dot" type="TextureButton"]
+offset_right = 1.0
+offset_bottom = 1.0
+texture_normal = ExtResource("1_7ilwh")
+script = ExtResource("2_wye70")
+color = Color(1, 1, 1, 1)
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
