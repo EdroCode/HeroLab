@@ -30,3 +30,7 @@ func _on_star_button_down() -> void:
 func select():
 	$StarButton.texture_normal = textura_ligada
 	selected = true
+
+func deselect():
+	$StarButton.texture_normal = textura_desligada
+	selected = false

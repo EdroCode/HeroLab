@@ -19,3 +19,9 @@ func set_points(number):
 		var dot = get_child(i + 1)
 		if dot.is_in_group("Dot"):
 			dot.paint()
+		
+
+func clear_points():
+	for dot in get_children():
+		if dot.is_in_group("Dot"):
+			dot.unpaint()

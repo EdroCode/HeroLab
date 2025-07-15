@@ -1,5 +1,16 @@
 extends Control
 
+
+func _physics_process(delta: float) -> void:
+	
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		$AudioStreamPlayer.play()
+
+		
+
+
+
+
 # Save
 
 func count_stars():

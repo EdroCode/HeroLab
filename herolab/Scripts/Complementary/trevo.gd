@@ -30,3 +30,7 @@ func _on_trevo_button_button_down() -> void:
 func select():
 	$TrevoButton.texture_normal = textura_ligada
 	selected = true
+
+func deselect():
+	$TrevoButton.texture_normal = textura_desligada
+	selected = false

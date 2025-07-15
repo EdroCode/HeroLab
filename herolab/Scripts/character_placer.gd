@@ -27,7 +27,5 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	image_texture.set_image(image)
 	
 	$ItemSprite.texture = image_texture
-
-
 	await  $AudioStreamPlayer.finished
 	$AudioStreamPlayer.stop()

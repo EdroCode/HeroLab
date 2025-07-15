@@ -17,3 +17,8 @@ func paint():
 	
 	painted = true
 	modulate = color
+
+func unpaint():
+	
+	painted = false
+	modulate = Color(1.0, 1.0, 1.0)
