@@ -36,19 +36,45 @@ func save():
 	#print(save_dict)
 	return save_dict
 
-	
 
-func save_game(path):
+
+var save_data = null
+
+# Path - Selected Directory
+
+func create_save_file(path):
 	
-	var save_data = save()  
-	var file = FileAccess.open(path, FileAccess.WRITE)
+	var file_path = path + "/" + save_data["name"] + ".save"
+	var file = FileAccess.open(file_path, FileAccess.WRITE)
 	
 	if file:
 		file.store_string(JSON.stringify(save_data))
 		file.close()
-		print("Game saved to: ", path)
+		print("Game File saved to: ", path)
 	else:
-		print("Failed to save game.")
+		print("Failed to save game file.")
+
+func create_save_folder(path):
+	
+	# Creates folder
+	var folder_path = path + "/" + save_data["name"] + "_save"
+	
+	var error = DirAccess.make_dir_recursive_absolute(folder_path)
+	if error != OK:
+		print("Folder could not be created")
+		return null
+	else:
+		print("Folder Created in " + folder_path)
+		return folder_path
+
+
+
+
+func save_game(dir):
+	
+	var folder_path = create_save_folder(dir)
+	create_save_file(folder_path)
+
 
 
 
@@ -61,9 +87,5 @@ func _on_button_down() -> void:
 
 func _on_file_dialog_dir_selected(dir: String) -> void:
 	print("Selected directory: ", dir)
-
-	var s_name = save()["filename"]
-	var save_name = s_name + ".save"
-	var full_path = dir.rstrip("/") + "/" + save_name
-
-	save_game(full_path)
+	save_data = save()  
+	save_game(dir)

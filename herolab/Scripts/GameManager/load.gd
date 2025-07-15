@@ -14,7 +14,8 @@ func _on_mouse_exited() -> void:
 	size -= Vector2(4,4)
 
 
-func load_game(path):
+func load_game_data(path):
+	
 	
 	
 	var save_file = FileAccess.open(path, FileAccess.READ)
@@ -68,4 +69,32 @@ func _on_button_down() -> void:
 
 
 func _on_load_dialog_file_selected(path: String) -> void:
-	load_game(path)
+	#load_game(path)
+	pass
+
+
+func _on_load_dialog_dir_selected(dir: String) -> void:
+	
+	load_game_data(find_first_save_file_in_dir(dir))
+	
+
+
+func find_first_save_file_in_dir(dir_path: String) -> String:
+	var dir = DirAccess.open(dir_path)
+	if not dir:
+		print("Failed to open directory: ", dir_path)
+		return ""
+
+	dir.list_dir_begin()
+	var file_name = dir.get_next()
+	while file_name != "":
+		if not dir.current_is_dir() and file_name.ends_with(".save"):
+			var full_path = dir_path + "/" + file_name
+			dir.list_dir_end()
+			print("Found save file: ", full_path)
+			return full_path
+		file_name = dir.get_next()
+
+	dir.list_dir_end()
+	print("No .save file found in: ", dir_path)
+	return ""
