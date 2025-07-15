@@ -12,3 +12,8 @@ func _on_button_down() -> void:
 	else:
 		modulate = Color(1.0, 1.0, 1.0)
 	painted = !painted
+
+func paint():
+	
+	painted = true
+	modulate = color

@@ -102,14 +102,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -7.0
+offset_left = -2.0
 offset_top = 16.0
-offset_right = -53.0
+offset_right = -6.0
 offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 55
-alignment = 2
 
 [node name="trevo" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("3_6qyon")]
 layout_mode = 2
@@ -440,18 +439,9 @@ offset_top = 209.0
 offset_right = -96.965
 offset_bottom = -18.65
 
-[node name="LoadDialog" type="FileDialog" parent="."]
-title = "Open a File"
-ok_button_text = "Open"
-dialog_hide_on_ok = true
-file_mode = 0
-access = 2
-use_native_dialog = true
-
-[node name="SaveDialog" type="FileDialog" parent="."]
+[node name="FileDialog" type="FileDialog" parent="."]
 title = "Open a Directory"
 ok_button_text = "Select Current Folder"
-dialog_hide_on_ok = true
 file_mode = 2
 access = 2
 use_native_dialog = true
@@ -459,8 +449,6 @@ use_native_dialog = true
 [connection signal="button_down" from="SidePanel/save" to="SidePanel/save" method="_on_button_down"]
 [connection signal="mouse_entered" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_exited"]
-[connection signal="button_down" from="SidePanel/load" to="SidePanel/load" method="_on_button_down"]
 [connection signal="mouse_entered" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_exited"]
-[connection signal="file_selected" from="LoadDialog" to="SidePanel/load" method="_on_load_dialog_file_selected"]
-[connection signal="dir_selected" from="SaveDialog" to="SidePanel/save" method="_on_file_dialog_dir_selected"]
+[connection signal="dir_selected" from="FileDialog" to="SidePanel/save" method="_on_file_dialog_dir_selected"]

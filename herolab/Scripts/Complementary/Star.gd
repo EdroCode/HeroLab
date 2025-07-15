@@ -2,7 +2,7 @@ extends Control
 
 @export var textura_ligada : Texture2D
 @export var textura_desligada : Texture2D
-
+var selected = false
 
 func _ready() -> void:
 	
@@ -17,8 +17,16 @@ func _on_star_button_down() -> void:
 	
 	if $StarButton.texture_normal == textura_desligada:
 		$StarButton.texture_normal = textura_ligada
+		selected = true
+		
 	else:
 		$StarButton.texture_normal = textura_desligada
+		selected = false
 		
 	await  $AudioStreamPlayer.finished
 	$AudioStreamPlayer.stop()
+
+
+func select():
+	$StarButton.texture_normal = textura_ligada
+	selected = true
