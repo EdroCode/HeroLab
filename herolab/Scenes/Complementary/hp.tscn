@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c10so7g26wvvn"]
+[gd_scene load_steps=4 format=3 uid="uid://c10so7g26wvvn"]
 
+[ext_resource type="Script" uid="uid://7te7om4ai8vw" path="res://Scenes/Complementary/hp.gd" id="1_342q0"]
 [ext_resource type="Texture2D" uid="uid://cj3uvw4dgeqgy" path="res://ArtWork/Sprites/UI - Front/hp_blank.png" id="1_hqjsl"]
 [ext_resource type="PackedScene" uid="uid://ce4n56sa1esp0" path="res://Scenes/Complementary/dot.tscn" id="2_lt7up"]
 
@@ -13,6 +14,7 @@ offset_bottom = -763.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(7, 7)
+script = ExtResource("1_342q0")
 
 [node name="HPBlank" type="TextureRect" parent="."]
 layout_mode = 0

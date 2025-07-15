@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://vcx8ogn44hnl"]
+[gd_scene load_steps=4 format=3 uid="uid://vcx8ogn44hnl"]
 
+[ext_resource type="Script" uid="uid://bmb1jjsx0kqiu" path="res://Scripts/Complementary/attack.gd" id="1_0cvgu"]
 [ext_resource type="Texture2D" uid="uid://codn560q6i317" path="res://ArtWork/Sprites/UI - Front/attack_blank.png" id="1_ij4ji"]
 [ext_resource type="PackedScene" uid="uid://ce4n56sa1esp0" path="res://Scenes/Complementary/dot.tscn" id="2_ht1lw"]
 
@@ -13,6 +14,7 @@ offset_bottom = -763.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(7, 7)
+script = ExtResource("1_0cvgu")
 
 [node name="AttackBlank" type="TextureRect" parent="."]
 layout_mode = 0

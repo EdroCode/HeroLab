@@ -20,6 +20,7 @@ textura_desligada = ExtResource("3_sj3hx")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture_normal = ExtResource("3_sj3hx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_fsmy4")

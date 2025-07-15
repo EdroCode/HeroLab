@@ -1,11 +1,17 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://eoki2u64xs1f"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://eoki2u64xs1f"]
 
 [ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/AbacaxiPixels.ttf" id="1_5hs12"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4po7"]
 bg_color = Color(0.858824, 0.47451, 0.435294, 0)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7qevl"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hs12"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngxbk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfmyl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4po7"]
 
@@ -25,7 +31,10 @@ bg_color = Color(0.858824, 0.47451, 0.435294, 0)
 /styles/DefaultFlat = SubResource("StyleBoxFlat_e4po7")
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("1_5hs12")
+Button/styles/focus = SubResource("StyleBoxEmpty_7qevl")
 Button/styles/hover = SubResource("StyleBoxEmpty_5hs12")
+Button/styles/normal = SubResource("StyleBoxEmpty_ngxbk")
+Button/styles/pressed = SubResource("StyleBoxEmpty_jfmyl")
 LineEdit/font_sizes/font_size = 32
 LineEdit/fonts/font = ExtResource("1_5hs12")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_e4po7")

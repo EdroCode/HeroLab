@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://demupb720pac6" path="res://ArtWork/Sprites/UI - Front/dot.png" id="1_7ilwh"]
 [ext_resource type="Script" uid="uid://dua45rate3gvb" path="res://Scripts/Complementary/dot.gd" id="2_wye70"]
 
-[node name="Dot" type="TextureButton"]
+[node name="Dot" type="TextureButton" groups=["Dot"]]
 offset_right = 1.0
 offset_bottom = 1.0
 texture_normal = ExtResource("1_7ilwh")
