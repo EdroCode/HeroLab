@@ -15,3 +15,4 @@ func _on_button_down() -> void:
 	$"../../CharacterData/Stats/Attack".clear_points()
 	$"../../CharacterData/Stats/Defense".clear_points()
 	$"../../CharacterData/Stats/HP".clear_points()
+	$"../../StatsPanel/Level".clear_points()

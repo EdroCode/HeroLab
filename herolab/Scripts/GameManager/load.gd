@@ -4,6 +4,7 @@ extends Button
 @onready var attack = $"../../CharacterData/Stats/Attack"
 @onready var defense = $"../../CharacterData/Stats/Defense"
 @onready var hp = $"../../CharacterData/Stats/HP"
+@onready var level_light = $"../../StatsPanel/Level"
 
 func _on_mouse_entered() -> void:
 	size += Vector2(4,4)
@@ -35,10 +36,10 @@ func load_game(path):
 		var level = int(data["level"])
 		var n_star = int(data["popularity"])
 		var n_luck = int(data["luck"])
+		var n_level = int(data["level_lights"])
 		var att_points = int(data["attack_points"])
 		var def_points = int(data["def_points"])
 		var hp_points = int(data["hp_points"])
-		
 		var money = int(data["money"])
 		
 		# Loading variables
@@ -51,6 +52,7 @@ func load_game(path):
 		attack.set_points(att_points)
 		defense.set_points(def_points)
 		hp.set_points(hp_points)
+		level_light.set_points(n_level)
 		
 		
 		

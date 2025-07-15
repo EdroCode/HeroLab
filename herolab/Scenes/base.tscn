@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=22 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cv443d8gl0owa" path="res://Scenes/item_placer.tscn" id="4_jdayy"]
 [ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/AbacaxiPixels.ttf" id="5_8nfiu"]
 [ext_resource type="PackedScene" uid="uid://b8bjpkljedqwe" path="res://Scenes/character_placer.tscn" id="6_e4po7"]
+[ext_resource type="PackedScene" uid="uid://d3avmqihmaw6u" path="res://Scenes/level.tscn" id="7_sqgr6"]
 [ext_resource type="PackedScene" uid="uid://vcx8ogn44hnl" path="res://Scenes/Complementary/attack.tscn" id="8_3v5je"]
 [ext_resource type="PackedScene" uid="uid://0u025hosng0h" path="res://Scenes/Complementary/defense.tscn" id="9_du40w"]
 [ext_resource type="PackedScene" uid="uid://c10so7g26wvvn" path="res://Scenes/Complementary/hp.tscn" id="10_omojh"]
@@ -159,6 +160,13 @@ theme_override_fonts/normal_font = ExtResource("5_8nfiu")
 theme_override_font_sizes/normal_font_size = 32
 text = "LV
 "
+
+[node name="Level" parent="StatsPanel" instance=ExtResource("7_sqgr6")]
+layout_mode = 1
+offset_left = 419.0
+offset_top = 63.0
+offset_right = 379.0
+offset_bottom = 23.0
 
 [node name="CharacterData" type="Control" parent="."]
 anchors_preset = 0

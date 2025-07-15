@@ -18,6 +18,7 @@ func save():
 	$"../../CharacterData/Stats/Attack".get_points()
 	$"../../CharacterData/Stats/Defense".get_points()
 	$"../../CharacterData/Stats/HP".get_points()
+	$"../../StatsPanel/Level".get_points()
 	
 	var save_dict = {
 		"filename" : str($"../../StatsPanel/NameInput".text) + "_save",
@@ -28,8 +29,8 @@ func save():
 		"attack_points" : $"../../CharacterData/Stats/Attack".points,
 		"def_points" : $"../../CharacterData/Stats/Defense".points,
 		"hp_points" : $"../../CharacterData/Stats/HP".points,
-		"money" : int($"../../Inventory/Money/MoneyInput".text)
-		
+		"money" : int($"../../Inventory/Money/MoneyInput".text),
+		"level_lights" : int($"../../StatsPanel/Level".lights_on)
 		
 	}
 	#print(save_dict)

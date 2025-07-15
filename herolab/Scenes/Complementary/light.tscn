@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6onu5xmfe1bl"]
+
+[ext_resource type="Texture2D" uid="uid://bg1vfeb0a4euj" path="res://ArtWork/Sprites/Addons/pilha.png" id="1_41142"]
+[ext_resource type="Script" uid="uid://cq6vqmhei3yan" path="res://Scenes/Complementary/light.gd" id="2_hiojo"]
+
+[node name="Light" type="TextureButton"]
+offset_right = 3.0
+offset_bottom = 1.0
+texture_normal = ExtResource("1_41142")
+script = ExtResource("2_hiojo")
+textura_ligada = ExtResource("1_41142")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
