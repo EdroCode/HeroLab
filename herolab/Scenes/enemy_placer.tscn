@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8bjpkljedqwe"]
+[gd_scene load_steps=5 format=3 uid="uid://bk1eblfivbv0y"]
 
-[ext_resource type="Texture2D" uid="uid://df5jt6lgx2wbi" path="res://ArtWork/Sprites/UI - Front/blank2.png" id="1_bc7r0"]
-[ext_resource type="Script" uid="uid://btdcthhe4lyb8" path="res://Scripts/character_placer.gd" id="1_gwtbq"]
-[ext_resource type="Texture2D" uid="uid://bo3coeggsy8q7" path="res://ArtWork/Sprites/UI - Front/add2.png" id="3_h2sqk"]
-[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_8hdmk"]
+[ext_resource type="Script" uid="uid://btdcthhe4lyb8" path="res://Scripts/character_placer.gd" id="1_nvf7j"]
+[ext_resource type="Texture2D" uid="uid://df5jt6lgx2wbi" path="res://ArtWork/Sprites/UI - Front/blank2.png" id="2_y65ag"]
+[ext_resource type="Texture2D" uid="uid://bo3coeggsy8q7" path="res://ArtWork/Sprites/UI - Front/add2.png" id="3_rugsx"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_lm7m3"]
 
-[node name="CharacterPlacer" type="Control"]
+[node name="EnemyPlacer" type="Control"]
 layout_mode = 3
 anchor_right = 0.523
 anchor_bottom = 0.345
@@ -14,22 +14,22 @@ offset_bottom = -227.65
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(7, 7)
-script = ExtResource("1_gwtbq")
-blank = ExtResource("1_bc7r0")
-add = ExtResource("3_h2sqk")
+script = ExtResource("1_nvf7j")
+blank = ExtResource("2_y65ag")
+add = ExtResource("3_rugsx")
 
 [node name="Sprite" type="TextureButton" parent="."]
 layout_mode = 0
 offset_right = 34.0
 offset_bottom = 38.0
-texture_normal = ExtResource("1_bc7r0")
+texture_normal = ExtResource("2_y65ag")
 
-[node name="ItemSprite" type="TextureRect" parent="." groups=["CharacterPFP", "Image"]]
+[node name="ItemSprite" type="TextureRect" parent="." groups=["EnemyImage"]]
 layout_mode = 0
 offset_right = 34.0
 offset_bottom = 38.0
 mouse_filter = 2
-stretch_mode = 3
+expand_mode = 1
 
 [node name="FileDialog" type="FileDialog" parent="."]
 auto_translate_mode = 1
@@ -43,7 +43,7 @@ access = 2
 use_native_dialog = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_8hdmk")
+stream = ExtResource("4_lm7m3")
 pitch_scale = 15.65
 
 [connection signal="mouse_entered" from="Sprite" to="." method="_on_sprite_mouse_entered"]
