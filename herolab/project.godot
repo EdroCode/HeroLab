@@ -13,6 +13,8 @@ config_version=5
 config/name="HeroLab"
 run/main_scene="uid://3c47n7hfvkwm"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/fullsize=false
+boot_splash/image="uid://drxdigtwpw07g"
 config/icon="res://icon.svg"
 
 [display]

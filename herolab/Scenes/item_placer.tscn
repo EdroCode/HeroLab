@@ -24,7 +24,7 @@ offset_right = 16.0
 offset_bottom = 16.0
 texture_normal = ExtResource("1_1gsmf")
 
-[node name="ItemSprite" type="TextureRect" parent="."]
+[node name="ItemSprite" type="TextureRect" parent="." groups=["Image", "Item"]]
 layout_mode = 0
 offset_right = 16.0
 offset_bottom = 16.0

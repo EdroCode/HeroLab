@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=22 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -21,8 +21,6 @@
 [ext_resource type="Script" uid="uid://61eirhvwpqfi" path="res://Scenes/clear.gd" id="14_vpub5"]
 [ext_resource type="Texture2D" uid="uid://dpcdm746bp2qw" path="res://ArtWork/Sprites/UI - Front/FUGIR.png" id="14_yv4wf"]
 [ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="19_gsh4k"]
-[ext_resource type="PackedScene" uid="uid://bk1eblfivbv0y" path="res://Scenes/enemy_placer.tscn" id="21_84im8"]
-[ext_resource type="VideoStream" uid="uid://cx2b1ohe6oeen" path="res://ArtWork/SFX/furret-pokémon.ogv" id="22_nxg6o"]
 
 [node name="Base" type="Control"]
 layout_mode = 3
@@ -446,25 +444,6 @@ layout_mode = 2
 [node name="Heart5" parent="SidePanel/Hearts/HBoxContainer" instance=ExtResource("12_yoopj")]
 layout_mode = 2
 
-[node name="EnemyPlacer" parent="SidePanel" instance=ExtResource("21_84im8")]
-layout_mode = 1
-offset_left = 112.0
-offset_top = 205.0
-offset_right = -91.965
-offset_bottom = -22.65
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SidePanel/EnemyPlacer"]
-visible = false
-layout_mode = 0
-offset_left = 1.42857
-offset_top = 3.85714
-offset_right = 624.429
-offset_bottom = 626.857
-scale = Vector2(0.060583, 0.060583)
-stream = ExtResource("22_nxg6o")
-autoplay = true
-loop = true
-
 [node name="Credits" type="RichTextLabel" parent="SidePanel"]
 modulate = Color(1, 1, 1, 0.32549)
 layout_mode = 0
@@ -478,6 +457,13 @@ theme_override_fonts/normal_font = ExtResource("5_8nfiu")
 theme_override_font_sizes/normal_font_size = 32
 text = "EDRO
 "
+
+[node name="CharacterPlacer" parent="SidePanel" instance=ExtResource("6_e4po7")]
+layout_mode = 1
+offset_left = 107.0
+offset_top = 209.0
+offset_right = -96.965
+offset_bottom = -18.65
 
 [node name="LoadDialog" type="FileDialog" parent="."]
 title = "Open a Directory"

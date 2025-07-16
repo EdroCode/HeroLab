@@ -76,7 +76,7 @@ func _on_load_dialog_file_selected(path: String) -> void:
 func _on_load_dialog_dir_selected(dir: String) -> void:
 	
 	load_game_data(find_first_save_file_in_dir(dir))
-	
+	load_images(dir)
 
 
 func find_first_save_file_in_dir(dir_path: String) -> String:
@@ -98,3 +98,74 @@ func find_first_save_file_in_dir(dir_path: String) -> String:
 	dir.list_dir_end()
 	print("No .save file found in: ", dir_path)
 	return ""
+
+
+
+
+# Images
+
+
+func load_images(dir):
+	assign_pngs_to_texture_rects(dir)
+	
+
+
+
+
+
+func assign_pngs_to_texture_rects(directory_path: String) -> void:
+	var dir = DirAccess.open(directory_path)
+	if dir == null:
+		push_error("Cannot open directory: " + directory_path)
+		return
+
+	dir.list_dir_begin()
+	var files = []
+
+	var file_name = dir.get_next()
+	while file_name != "":
+		if not dir.current_is_dir() and file_name.ends_with(".png"):
+			files.append(directory_path + "/" + file_name)
+		file_name = dir.get_next()
+	dir.list_dir_end()
+
+	var texture_rects = get_texture_rects_in_image_group()
+
+	for i in range(min(files.size(), texture_rects.size())):
+		var image = Image.new()
+		var error = image.load(files[i])
+		if error != OK:
+			push_error("Failed to load image: " + files[i])
+			continue
+		
+		# Codigo horrivel, talvez melhorar no futuro
+		var texture = ImageTexture.create_from_image(image)
+		if files[i].get_file().to_lower() == "character.png":
+			$"../../CharacterData/CharacterPlacer".get_child(1).texture = texture
+			print("woba")
+		elif files[i].get_file().to_lower() == "item1.png":
+			$"../../CharacterData/ItemPlacer".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item2.png":
+			$"../../CharacterData/ItemPlacer2".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item3.png":
+			$"../../Inventory/Items/ItemPlacer".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item4.png":
+			$"../../Inventory/Items/ItemPlacer2".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item5.png":
+			$"../../Inventory/Items/ItemPlacer3".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item6.png":
+			$"../../Inventory/Items/ItemPlacer4".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item7.png":
+			$"../../Inventory/Items/ItemPlacer5".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "item8.png":
+			$"../../Inventory/Items/ItemPlacer6".get_child(1).texture = texture
+		
+
+
+
+func get_texture_rects_in_image_group() -> Array:
+	var texture_rects = []
+	for node in get_tree().get_nodes_in_group("Image"):
+		if node is TextureRect:
+			texture_rects.append(node)
+	return texture_rects
