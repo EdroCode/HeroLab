@@ -31,3 +31,9 @@ func _on_heart_sprite_button_down() -> void:
 	await  $AudioStreamPlayer.finished
 	$AudioStreamPlayer.stop()
 	
+
+func deselect():
+	selected = false
+	$HeartSprite.texture_normal = textura_desligada
+	$AnimationPlayer.stop()
+	$AnimationPlayer.play("Idle")

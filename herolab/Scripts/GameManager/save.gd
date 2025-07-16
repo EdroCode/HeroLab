@@ -30,8 +30,8 @@ func save():
 		"def_points" : $"../../CharacterData/Stats/Defense".points,
 		"hp_points" : $"../../CharacterData/Stats/HP".points,
 		"money" : int($"../../Inventory/Money/MoneyInput".text),
-		"level_lights" : int($"../../StatsPanel/Level".lights_on)
-		
+		"level_lights" : int($"../../StatsPanel/Level".lights_on),
+		"comment" : str($"../../Comment/TextEdit".text)
 	}
 	#print(save_dict)
 	return save_dict

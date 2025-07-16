@@ -42,11 +42,14 @@ func load_game_data(path):
 		var def_points = int(data["def_points"])
 		var hp_points = int(data["hp_points"])
 		var money = int(data["money"])
+		var comment = str(data["comment"])
 		
 		# Loading variables
 		$"../../StatsPanel/NameInput".text = c_name
 		$"../../StatsPanel/LevelInput".text = str(level)
 		$"../../Inventory/Money/MoneyInput".text = str(money)
+		
+		$"../../Comment/TextEdit".text = comment
 		
 		parent.set_stars(n_star)
 		parent.set_luck(n_luck)

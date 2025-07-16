@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=26 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b8bjpkljedqwe" path="res://Scenes/character_placer.tscn" id="6_e4po7"]
 [ext_resource type="PackedScene" uid="uid://d3avmqihmaw6u" path="res://Scenes/level.tscn" id="7_sqgr6"]
 [ext_resource type="PackedScene" uid="uid://vcx8ogn44hnl" path="res://Scenes/Complementary/attack.tscn" id="8_3v5je"]
+[ext_resource type="Texture2D" uid="uid://cbmcqu3ytwoln" path="res://ArtWork/Sprites/Addons/ARROW.png" id="8_5fymt"]
 [ext_resource type="PackedScene" uid="uid://0u025hosng0h" path="res://Scenes/Complementary/defense.tscn" id="9_du40w"]
 [ext_resource type="PackedScene" uid="uid://c10so7g26wvvn" path="res://Scenes/Complementary/hp.tscn" id="10_omojh"]
 [ext_resource type="Texture2D" uid="uid://b02sirdneiwy7" path="res://ArtWork/Sprites/UI - Back/empty.png" id="11_omojh"]
@@ -23,6 +24,9 @@
 [ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="19_gsh4k"]
 [ext_resource type="PackedScene" uid="uid://bk1eblfivbv0y" path="res://Scenes/enemy_placer.tscn" id="21_84im8"]
 [ext_resource type="VideoStream" uid="uid://cx2b1ohe6oeen" path="res://ArtWork/SFX/furret-pokémon.ogv" id="22_nxg6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fymt"]
+bg_color = Color(0, 0, 0, 0.698039)
 
 [node name="Base" type="Control"]
 layout_mode = 3
@@ -170,6 +174,16 @@ offset_top = 63.0
 offset_right = 379.0
 offset_bottom = 23.0
 
+[node name="Arrow" type="TextureButton" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 93.0
+offset_right = 267.0
+offset_bottom = 101.0
+rotation = -1.57079
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_5fymt")
+
 [node name="CharacterData" type="Control" parent="."]
 anchors_preset = 0
 offset_top = 133.0
@@ -312,6 +326,26 @@ theme = ExtResource("4_48and")
 text = "000"
 wrap_mode = 1
 autowrap_mode = 1
+
+[node name="Comment" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 139.0
+offset_right = 448.0
+offset_bottom = 511.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5fymt")
+
+[node name="TextEdit" type="TextEdit" parent="Comment"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_48and")
+theme_override_font_sizes/font_size = 32
+wrap_mode = 1
 
 [node name="SidePanel" type="Control" parent="."]
 anchors_preset = 0
@@ -499,6 +533,7 @@ use_native_dialog = true
 stream = ExtResource("19_gsh4k")
 pitch_scale = 2.28
 
+[connection signal="button_down" from="StatsPanel/Arrow" to="." method="_on_arrow_button_down"]
 [connection signal="button_down" from="SidePanel/save" to="SidePanel/save" method="_on_button_down"]
 [connection signal="mouse_entered" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_exited"]

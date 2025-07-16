@@ -20,6 +20,9 @@ func _on_button_down() -> void:
 	for i in $"../../UpperBar/StarBar/VBoxContainer".get_children():
 		i.deselect()
 	
+	for i in $"../Hearts/HBoxContainer".get_children():
+		i.deselect()
+	
 	$"../../CharacterData/Stats/Attack".clear_points()
 	$"../../CharacterData/Stats/Defense".clear_points()
 	$"../../CharacterData/Stats/HP".clear_points()
@@ -28,7 +31,9 @@ func _on_button_down() -> void:
 	for i in get_texture_rects_in_image_group():
 		i.texture = null
 	
-
+	$"../EnemyPlacer".get_child(1).texture = null
+	$"../../Comment/TextEdit".text = ""
+	
 	await time.timeout
 	
 	time.stop()
