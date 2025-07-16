@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=37 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -21,12 +21,25 @@
 [ext_resource type="Script" uid="uid://bkjj7kf8s8lum" path="res://Scripts/GameManager/load.gd" id="13_h12cx"]
 [ext_resource type="Script" uid="uid://61eirhvwpqfi" path="res://Scenes/clear.gd" id="14_vpub5"]
 [ext_resource type="Texture2D" uid="uid://dpcdm746bp2qw" path="res://ArtWork/Sprites/UI - Front/FUGIR.png" id="14_yv4wf"]
+[ext_resource type="Texture2D" uid="uid://bd1jvqrg3ug8k" path="res://ArtWork/Sprites/Extra/Software_Save_Button_Floppy_Disk.png" id="15_3ys61"]
+[ext_resource type="StyleBox" uid="uid://b0w4tv06d6ytp" path="res://ArtWork/Sprites/Extra/new_style_box_flat.tres" id="15_uqsg3"]
+[ext_resource type="Texture2D" uid="uid://di5atuc24ylv5" path="res://ArtWork/Sprites/Extra/Software_Trashcan_Garbage_Bin_Rubbish_Delete_Erase_1.png" id="17_0a10q"]
+[ext_resource type="Texture2D" uid="uid://t3ljwf8o2cxl" path="res://ArtWork/Sprites/Extra/Software_Clipbaord_List_File_Copy_Paste.png" id="19_6i1gj"]
 [ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="19_gsh4k"]
 [ext_resource type="PackedScene" uid="uid://bk1eblfivbv0y" path="res://Scenes/enemy_placer.tscn" id="21_84im8"]
+[ext_resource type="Texture2D" uid="uid://bqi14xqm0e4d1" path="res://ArtWork/Sprites/Extra/Software_Options_Settings_Cogwheel_Gear_Mechanics.png" id="22_ayuia"]
+[ext_resource type="Texture2D" uid="uid://ca11ewwphfnw3" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_2.png" id="22_jwfaf"]
 [ext_resource type="VideoStream" uid="uid://cx2b1ohe6oeen" path="res://ArtWork/SFX/furret-pokémon.ogv" id="22_nxg6o"]
+[ext_resource type="Script" uid="uid://cv8ps2lqvsevk" path="res://Scenes/settings_panel.gd" id="29_ay4ti"]
+[ext_resource type="Texture2D" uid="uid://cre1brl83quu6" path="res://ArtWork/Sprites/Extra/Software_Signs_Checkmark_Checkbox_Ticked_Todo.png" id="29_jxcor"]
+[ext_resource type="Texture2D" uid="uid://uxcmql2d5pok" path="res://ArtWork/Sprites/Extra/Software_Signs_Maths_Multiplication_X_Crossout_Checkmark_Cancel.png" id="30_ay4ti"]
+[ext_resource type="Texture2D" uid="uid://etehr5qi0ems" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_X_Disabled.png" id="33_717g3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fymt"]
 bg_color = Color(0, 0, 0, 0.698039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayuia"]
+bg_color = Color(0.0588235, 0.0588235, 0.0588235, 0.823529)
 
 [node name="Base" type="Control"]
 layout_mode = 3
@@ -372,39 +385,68 @@ color = Color(0, 0, 0, 1)
 [node name="save" type="Button" parent="SidePanel"]
 layout_mode = 0
 offset_left = 9.0
-offset_top = 12.0
-offset_right = 120.0
-offset_bottom = 52.0
+offset_top = 7.0
+offset_right = 57.0
+offset_bottom = 51.0
 scale = Vector2(1.3, 1.3)
 theme = ExtResource("4_48and")
-text = "SAVE"
-flat = true
+theme_override_styles/normal = ExtResource("15_uqsg3")
+icon = ExtResource("15_3ys61")
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("12_yv4wf")
 
 [node name="clear" type="Button" parent="SidePanel"]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 12.0
-offset_right = 269.0
-offset_bottom = 52.0
+offset_left = 76.0
+offset_top = 7.0
+offset_right = 123.0
+offset_bottom = 51.0
 scale = Vector2(1.3, 1.3)
 theme = ExtResource("4_48and")
-text = "CLEAR
-"
-flat = true
+theme_override_styles/normal = ExtResource("15_uqsg3")
+icon = ExtResource("17_0a10q")
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("14_vpub5")
 
 [node name="load" type="Button" parent="SidePanel"]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 12.0
-offset_right = 428.0
-offset_bottom = 52.0
+offset_left = 142.0
+offset_top = 7.0
+offset_right = 196.0
+offset_bottom = 51.0
 scale = Vector2(1.3, 1.3)
 theme = ExtResource("4_48and")
-text = "LOAD"
-flat = true
+theme_override_styles/normal = ExtResource("15_uqsg3")
+icon = ExtResource("19_6i1gj")
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("13_h12cx")
+
+[node name="Sound" type="Button" parent="SidePanel"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 7.0
+offset_right = 395.0
+offset_bottom = 64.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_uqsg3")
+icon = ExtResource("22_jwfaf")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Settings" type="Button" parent="SidePanel"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 7.0
+offset_right = 455.0
+offset_bottom = 64.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_uqsg3")
+icon = ExtResource("22_ayuia")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Options" type="Control" parent="SidePanel"]
 anchors_preset = 0
@@ -513,6 +555,49 @@ theme_override_font_sizes/normal_font_size = 32
 text = "EDRO
 "
 
+[node name="SettingsPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 455.0
+offset_top = 70.0
+offset_right = 903.0
+offset_bottom = 763.0
+script = ExtResource("29_ay4ti")
+enemy_on = ExtResource("29_jxcor")
+enemy_off = ExtResource("30_ay4ti")
+sound_on = ExtResource("22_jwfaf")
+sound_off = ExtResource("33_717g3")
+
+[node name="Panel" type="Panel" parent="SettingsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ayuia")
+
+[node name="ClearEnemyCheck" type="Button" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 27.0
+offset_right = 344.0
+offset_bottom = 67.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_uqsg3")
+icon = ExtResource("30_ay4ti")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ClearEnemy" type="RichTextLabel" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 35.0
+offset_right = 299.0
+offset_bottom = 85.0
+theme = ExtResource("4_48and")
+text = "Clear inimigo"
+
 [node name="LoadDialog" type="FileDialog" parent="."]
 title = "Open a Directory"
 ok_button_text = "Select Current Folder"
@@ -541,6 +626,9 @@ pitch_scale = 2.28
 [connection signal="button_down" from="SidePanel/load" to="SidePanel/load" method="_on_button_down"]
 [connection signal="mouse_entered" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_exited"]
+[connection signal="button_down" from="SidePanel/Sound" to="SettingsPanel" method="_on_sound_button_down"]
+[connection signal="button_down" from="SidePanel/Settings" to="SettingsPanel" method="_on_settings_button_down"]
+[connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck" to="SettingsPanel" method="_on_clear_enemy_check_button_down"]
 [connection signal="dir_selected" from="LoadDialog" to="SidePanel/load" method="_on_load_dialog_dir_selected"]
 [connection signal="file_selected" from="LoadDialog" to="SidePanel/load" method="_on_load_dialog_file_selected"]
 [connection signal="dir_selected" from="SaveDialog" to="SidePanel/save" method="_on_file_dialog_dir_selected"]

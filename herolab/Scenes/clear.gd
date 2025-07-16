@@ -1,6 +1,8 @@
 extends Button
 
 
+
+
 func _on_button_down() -> void:
 	
 	$"../EnemyPlacer/VideoStreamPlayer".visible = true
@@ -20,8 +22,12 @@ func _on_button_down() -> void:
 	for i in $"../../UpperBar/StarBar/VBoxContainer".get_children():
 		i.deselect()
 	
-	for i in $"../Hearts/HBoxContainer".get_children():
-		i.deselect()
+	if $"../../SettingsPanel".enemy_clear:
+		
+		for i in $"../Hearts/HBoxContainer".get_children():
+			i.deselect()
+		$"../EnemyPlacer".get_child(1).texture = null
+		
 	
 	$"../../CharacterData/Stats/Attack".clear_points()
 	$"../../CharacterData/Stats/Defense".clear_points()
@@ -31,7 +37,6 @@ func _on_button_down() -> void:
 	for i in get_texture_rects_in_image_group():
 		i.texture = null
 	
-	$"../EnemyPlacer".get_child(1).texture = null
 	$"../../Comment/TextEdit".text = ""
 	
 	await time.timeout
