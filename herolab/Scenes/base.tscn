@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=66 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -31,12 +31,86 @@
 [ext_resource type="VideoStream" uid="uid://cx2b1ohe6oeen" path="res://ArtWork/SFX/furret-pokémon.ogv" id="22_nxg6o"]
 [ext_resource type="Texture2D" uid="uid://ca11ewwphfnw3" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_2.png" id="23_ay4ti"]
 [ext_resource type="Script" uid="uid://cv8ps2lqvsevk" path="res://Scenes/settings_panel.gd" id="24_3ys61"]
+[ext_resource type="Script" uid="uid://bthi06cj6oya7" path="res://Scenes/shop.gd" id="27_oic0x"]
+[ext_resource type="Texture2D" uid="uid://d58udogmie07" path="res://ArtWork/Sprites/Extra/Items/item000.png" id="28_571f2"]
+[ext_resource type="Texture2D" uid="uid://ye4wqrxvyu53" path="res://ArtWork/Sprites/Extra/Items/item001.png" id="29_107s8"]
+[ext_resource type="Texture2D" uid="uid://g1rhk6egixem" path="res://ArtWork/Sprites/Extra/Items/item002.png" id="30_qd5id"]
 [ext_resource type="Texture2D" uid="uid://cre1brl83quu6" path="res://ArtWork/Sprites/Extra/Software_Signs_Checkmark_Checkbox_Ticked_Todo.png" id="31_717g3"]
+[ext_resource type="Texture2D" uid="uid://54lbdtvdvvuy" path="res://ArtWork/Sprites/Extra/Items/item003.png" id="31_q8dgr"]
 [ext_resource type="Texture2D" uid="uid://uxcmql2d5pok" path="res://ArtWork/Sprites/Extra/Software_Signs_Maths_Multiplication_X_Crossout_Checkmark_Cancel.png" id="32_mk4b3"]
+[ext_resource type="Texture2D" uid="uid://dlekf8afca386" path="res://ArtWork/Sprites/Extra/Items/item004.png" id="32_tpw7i"]
+[ext_resource type="Texture2D" uid="uid://bqrstb3rvlo8r" path="res://ArtWork/Sprites/Extra/Items/item005.png" id="33_5ebkv"]
 [ext_resource type="Texture2D" uid="uid://etehr5qi0ems" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_X_Disabled.png" id="33_oic0x"]
+[ext_resource type="Texture2D" uid="uid://1jayfl46wv0g" path="res://ArtWork/Sprites/Extra/Items/item006.png" id="34_gtmox"]
+[ext_resource type="Texture2D" uid="uid://cokj6vtg6dyta" path="res://ArtWork/Sprites/Extra/srrato-sheet.png" id="34_mk4b3"]
+[ext_resource type="Texture2D" uid="uid://c7jet2xy5mrre" path="res://ArtWork/Sprites/Extra/Items/item007.png" id="35_4hluw"]
+[ext_resource type="Texture2D" uid="uid://c2vptb5okea1r" path="res://ArtWork/Sprites/Extra/Items/item008.png" id="36_rsrcs"]
+[ext_resource type="Texture2D" uid="uid://dd551ep532ob5" path="res://ArtWork/Sprites/Extra/Items/item009.png" id="37_d2mfo"]
+[ext_resource type="Texture2D" uid="uid://5xheabunlag6" path="res://ArtWork/Sprites/Extra/Items/item010.png" id="38_0m7mc"]
+[ext_resource type="Texture2D" uid="uid://co5duta3m6geg" path="res://ArtWork/Sprites/Extra/Items/item011.png" id="39_bw0uk"]
+[ext_resource type="Texture2D" uid="uid://dsqnw7kl6qayk" path="res://ArtWork/Sprites/Extra/Items/item012.png" id="40_rtr1r"]
+[ext_resource type="Texture2D" uid="uid://c5drg6ta6sh4h" path="res://ArtWork/Sprites/Extra/Items/item013.png" id="41_tpw7i"]
+[ext_resource type="Texture2D" uid="uid://vhssv4w8r05" path="res://ArtWork/Sprites/Extra/Items/item014.png" id="42_5ebkv"]
+[ext_resource type="Texture2D" uid="uid://cst3d4iy1v8ko" path="res://ArtWork/Sprites/Extra/Items/item015.png" id="43_gtmox"]
+[ext_resource type="Texture2D" uid="uid://bfu7hxxcc2wv6" path="res://ArtWork/Sprites/Extra/Items/item016.png" id="44_4hluw"]
+[ext_resource type="Texture2D" uid="uid://c4idgywxvwrp" path="res://ArtWork/Sprites/Extra/Items/item017.png" id="45_5ebkv"]
+[ext_resource type="Texture2D" uid="uid://d2gc2vwb0khkb" path="res://ArtWork/Sprites/Extra/Items/item018.png" id="46_gtmox"]
+[ext_resource type="Texture2D" uid="uid://b42irwha3lpch" path="res://ArtWork/Sprites/Extra/Items/item019.png" id="47_4hluw"]
+[ext_resource type="Texture2D" uid="uid://ci4g8n2tudt2n" path="res://ArtWork/Sprites/Extra/IconeInimigo.png" id="49_0m7mc"]
+[ext_resource type="Texture2D" uid="uid://bb370esu6imjr" path="res://ArtWork/Sprites/Extra/Arrows_Roundabout_Rotation_Circle_Reload_Refresh_Loop.png" id="49_rsrcs"]
+[ext_resource type="Texture2D" uid="uid://cplm304r422li" path="res://ArtWork/Sprites/Extra/IconeLoja.png" id="57_d2mfo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fymt"]
 bg_color = Color(0, 0, 0, 0.698039)
+
+[sub_resource type="Animation" id="Animation_mk4b3"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Srrato-sheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.6, 2.73333, 2.9, 3.06667, 3.2, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_oic0x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Srrato-sheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oic0x"]
+_data = {
+&"RESET": SubResource("Animation_oic0x"),
+&"idle": SubResource("Animation_mk4b3")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk4b3"]
+bg_color = Color(0.0470588, 0.0470588, 0.0470588, 0.827451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m7mc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
 
 [node name="Base" type="Control"]
 layout_mode = 3
@@ -373,92 +447,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_omojh")
 
-[node name="ColorRect" type="ColorRect" parent="SidePanel"]
-layout_mode = 0
-offset_right = 455.0
-offset_bottom = 69.0
-color = Color(0, 0, 0, 1)
-
-[node name="save" type="Button" parent="SidePanel"]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 7.0
-offset_right = 52.0
-offset_bottom = 50.0
-scale = Vector2(1.3, 1.3)
-theme = ExtResource("4_48and")
-theme_override_styles/normal_mirrored = ExtResource("15_ayuia")
-theme_override_styles/normal = ExtResource("15_ayuia")
-icon = ExtResource("15_0a10q")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("12_yv4wf")
-
-[node name="clear" type="Button" parent="SidePanel"]
-layout_mode = 0
-offset_left = 127.0
-offset_top = 7.0
-offset_right = 170.0
-offset_bottom = 50.0
-scale = Vector2(1.3, 1.3)
-theme = ExtResource("4_48and")
-theme_override_styles/normal = ExtResource("15_ayuia")
-icon = ExtResource("17_6i1gj")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("14_vpub5")
-
-[node name="load" type="Button" parent="SidePanel"]
-layout_mode = 0
-offset_left = 68.0
-offset_top = 7.0
-offset_right = 111.0
-offset_bottom = 50.0
-scale = Vector2(1.3, 1.3)
-theme = ExtResource("4_48and")
-theme_override_styles/normal = ExtResource("15_ayuia")
-icon = ExtResource("19_uqsg3")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("13_h12cx")
-
-[node name="Settings" type="Button" parent="SidePanel"]
-layout_mode = 0
-offset_left = 399.0
-offset_top = 7.0
-offset_right = 442.0
-offset_bottom = 50.0
-scale = Vector2(1.3, 1.3)
-theme = ExtResource("4_48and")
-theme_override_styles/normal = ExtResource("15_ayuia")
-icon = ExtResource("22_jxcor")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Audio" type="Button" parent="SidePanel"]
-layout_mode = 0
-offset_left = 340.0
-offset_top = 7.0
-offset_right = 383.0
-offset_bottom = 50.0
-scale = Vector2(1.3, 1.3)
-theme = ExtResource("4_48and")
-theme_override_styles/normal = ExtResource("15_ayuia")
-icon = ExtResource("23_ay4ti")
-icon_alignment = 1
-expand_icon = true
-
-[node name="HeroLab" type="RichTextLabel" parent="SidePanel"]
-offset_left = 190.0
-offset_top = 20.0
-offset_right = 347.0
-offset_bottom = 60.0
-scale = Vector2(0.925, 0.925)
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("5_8nfiu")
-theme_override_font_sizes/normal_font_size = 32
-text = "HeroLab"
-
 [node name="Options" type="Control" parent="SidePanel"]
 anchors_preset = 0
 offset_left = 7.0
@@ -566,6 +554,77 @@ theme_override_font_sizes/normal_font_size = 32
 text = "EDRO
 "
 
+[node name="Shop" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 454.0
+offset_right = 910.0
+offset_bottom = 770.0
+script = ExtResource("27_oic0x")
+items = Array[Texture2D]([ExtResource("28_571f2"), ExtResource("29_107s8"), ExtResource("30_qd5id"), ExtResource("31_q8dgr"), ExtResource("32_tpw7i"), ExtResource("33_5ebkv"), ExtResource("34_gtmox"), ExtResource("35_4hluw"), ExtResource("36_rsrcs"), ExtResource("37_d2mfo"), ExtResource("38_0m7mc"), ExtResource("39_bw0uk"), ExtResource("40_rtr1r"), ExtResource("41_tpw7i"), ExtResource("42_5ebkv"), ExtResource("43_gtmox"), ExtResource("44_4hluw"), ExtResource("45_5ebkv"), ExtResource("46_gtmox"), ExtResource("47_4hluw")])
+shop_icon = ExtResource("57_d2mfo")
+fight_icon = ExtResource("49_0m7mc")
+
+[node name="Srrato-sheet" type="Sprite2D" parent="Shop"]
+position = Vector2(228, 385.215)
+scale = Vector2(7.00111, 7.00111)
+texture = ExtResource("34_mk4b3")
+hframes = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shop/Srrato-sheet"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_oic0x")
+}
+autoplay = "idle"
+
+[node name="Srrato-sheet2" type="Sprite2D" parent="Shop"]
+position = Vector2(228, 662)
+scale = Vector2(7, 7)
+texture = ExtResource("34_mk4b3")
+region_enabled = true
+region_rect = Rect2(0, 79.0267, 65.0216, 30.9733)
+
+[node name="Item1" type="TextureRect" parent="Shop"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 570.0
+offset_right = 152.0
+offset_bottom = 669.0
+texture = ExtResource("47_4hluw")
+stretch_mode = 6
+
+[node name="Item2" type="TextureRect" parent="Shop"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 622.0
+offset_right = 278.0
+offset_bottom = 721.0
+texture = ExtResource("44_4hluw")
+stretch_mode = 6
+
+[node name="Item3" type="TextureRect" parent="Shop"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 570.0
+offset_right = 404.0
+offset_bottom = 669.0
+texture = ExtResource("42_5ebkv")
+stretch_mode = 6
+
+[node name="Reload" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 698.0
+offset_right = 444.0
+offset_bottom = 761.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("49_rsrcs")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [node name="SettingsPanel" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 455.0
@@ -585,6 +644,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mk4b3")
+
+[node name="Audio" type="Button" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 629.0
+offset_right = 426.0
+offset_bottom = 672.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("23_ay4ti")
+icon_alignment = 1
+expand_icon = true
 
 [node name="ClearEnemyCheck" type="Button" parent="SettingsPanel/Panel"]
 layout_mode = 0
@@ -599,6 +672,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="HeroLab" type="RichTextLabel" parent="SettingsPanel/Panel"]
+layout_mode = 0
 offset_left = 13.0
 offset_top = 20.0
 offset_right = 302.0
@@ -608,6 +682,101 @@ mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("5_8nfiu")
 theme_override_font_sizes/normal_font_size = 32
 text = ">Clear Inimigo"
+
+[node name="TopPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 448.0
+offset_right = 910.0
+offset_bottom = 70.0
+
+[node name="ColorRect" type="ColorRect" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="save" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 52.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+theme_override_styles/normal_mirrored = ExtResource("15_ayuia")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("15_0a10q")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("12_yv4wf")
+
+[node name="clear" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 7.0
+offset_right = 170.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("17_6i1gj")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("14_vpub5")
+
+[node name="load" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("19_uqsg3")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("13_h12cx")
+
+[node name="Settings" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 7.0
+offset_right = 442.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("22_jxcor")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HeroLab" type="RichTextLabel" parent="TopPanel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 20.0
+offset_right = 347.0
+offset_bottom = 60.0
+scale = Vector2(0.925, 0.925)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_8nfiu")
+theme_override_font_sizes/normal_font_size = 32
+text = "HeroLab"
+
+[node name="ShopButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 7.0
+offset_right = 808.0
+offset_bottom = 27.0
+scale = Vector2(2.8, 2.8)
+theme = ExtResource("4_48and")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0m7mc")
+icon = ExtResource("57_d2mfo")
+icon_alignment = 1
 
 [node name="LoadDialog" type="FileDialog" parent="."]
 title = "Open a Directory"
@@ -630,16 +799,18 @@ stream = ExtResource("19_gsh4k")
 pitch_scale = 2.28
 
 [connection signal="button_down" from="StatsPanel/Arrow" to="." method="_on_arrow_button_down"]
-[connection signal="button_down" from="SidePanel/save" to="SidePanel/save" method="_on_button_down"]
-[connection signal="mouse_entered" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="SidePanel/save" to="SidePanel/save" method="_on_mouse_exited"]
-[connection signal="button_down" from="SidePanel/clear" to="SidePanel/clear" method="_on_button_down"]
-[connection signal="button_down" from="SidePanel/load" to="SidePanel/load" method="_on_button_down"]
-[connection signal="mouse_entered" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="SidePanel/load" to="SidePanel/load" method="_on_mouse_exited"]
-[connection signal="button_down" from="SidePanel/Settings" to="SettingsPanel" method="_on_settings_button_down"]
-[connection signal="button_down" from="SidePanel/Audio" to="SettingsPanel" method="_on_audio_button_down"]
+[connection signal="button_down" from="Shop/Reload" to="Shop" method="_on_reload_button_down"]
+[connection signal="button_down" from="SettingsPanel/Panel/Audio" to="SettingsPanel" method="_on_audio_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck" to="SettingsPanel" method="_on_clear_enemy_check_button_down"]
-[connection signal="dir_selected" from="LoadDialog" to="SidePanel/load" method="_on_load_dialog_dir_selected"]
-[connection signal="file_selected" from="LoadDialog" to="SidePanel/load" method="_on_load_dialog_file_selected"]
-[connection signal="dir_selected" from="SaveDialog" to="SidePanel/save" method="_on_file_dialog_dir_selected"]
+[connection signal="button_down" from="TopPanel/save" to="TopPanel/save" method="_on_button_down"]
+[connection signal="mouse_entered" from="TopPanel/save" to="TopPanel/save" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TopPanel/save" to="TopPanel/save" method="_on_mouse_exited"]
+[connection signal="button_down" from="TopPanel/clear" to="TopPanel/clear" method="_on_button_down"]
+[connection signal="button_down" from="TopPanel/load" to="TopPanel/load" method="_on_button_down"]
+[connection signal="mouse_entered" from="TopPanel/load" to="TopPanel/load" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TopPanel/load" to="TopPanel/load" method="_on_mouse_exited"]
+[connection signal="button_down" from="TopPanel/Settings" to="SettingsPanel" method="_on_settings_button_down"]
+[connection signal="button_down" from="ShopButton" to="Shop" method="_on_shop_button_button_down"]
+[connection signal="dir_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_dir_selected"]
+[connection signal="file_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_file_selected"]
+[connection signal="dir_selected" from="SaveDialog" to="TopPanel/save" method="_on_file_dialog_dir_selected"]
