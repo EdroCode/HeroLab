@@ -5,7 +5,7 @@ extends Button
 
 func _on_button_down() -> void:
 	
-	$"../EnemyPlacer/VideoStreamPlayer".visible = true
+	$"../../SidePanel/EnemyPlacer/VideoStreamPlayer".visible = true
 	
 	var time = Timer.new()
 	add_child(time)
@@ -24,9 +24,9 @@ func _on_button_down() -> void:
 	
 	if $"../../SettingsPanel".enemy_clear:
 		
-		for i in $"../Hearts/HBoxContainer".get_children():
+		for i in $"../../SidePanel/Hearts/HBoxContainer"   .get_children():
 			i.deselect()
-		$"../EnemyPlacer".get_child(1).texture = null
+		$"../../SidePanel/EnemyPlacer".get_child(1).texture = null
 		
 	
 	$"../../CharacterData/Stats/Attack".clear_points()
@@ -43,7 +43,7 @@ func _on_button_down() -> void:
 	
 	time.stop()
 	time.queue_free()
-	$"../EnemyPlacer/VideoStreamPlayer".visible = false
+	$"../../SidePanel/EnemyPlacer/VideoStreamPlayer".visible = false
 
 
 func get_texture_rects_in_image_group() -> Array:

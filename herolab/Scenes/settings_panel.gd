@@ -25,9 +25,9 @@ func _on_settings_button_down() -> void:
 func _on_audio_button_down() -> void:
 	sound = !sound
 	if sound:
-		$"../SidePanel/Audio".icon = sound_on
+		$Panel/Audio.icon = sound_on
 	else:
-		$"../SidePanel/Audio".icon = sound_off
+		$Panel/Audio.icon = sound_off
 		
 	AudioServer.set_bus_mute(music_bus, not AudioServer.is_bus_mute(music_bus))
 
