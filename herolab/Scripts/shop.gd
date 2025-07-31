@@ -42,15 +42,17 @@ var shop_mode = false
 
 
 func _on_shop_button_button_down() -> void:
-	
+	$"../SelectMenuPanel".visible = false
+	$"../SettingsPanel".select_menu_opened = false
 	shop_mode = !shop_mode
 	
 	if shop_mode:
-		$"../ShopButton".icon = fight_icon
+		$"../SelectMenuPanel/ShopButton".icon = fight_icon
 		$".".visible = true
 		$"../SidePanel".visible = false
+		$"../Batalha".visible = false
 	else:
-		$"../ShopButton".icon = shop_icon
+		$"../SelectMenuPanel/ShopButton".icon = shop_icon
 		$"../SidePanel".visible = true
 		
 		$".".visible = false

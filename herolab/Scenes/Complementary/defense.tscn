@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://0u025hosng0h"]
 
-[ext_resource type="Script" uid="uid://dgmufx7h4gept" path="res://Scenes/Complementary/defense.gd" id="1_pss8j"]
+[ext_resource type="Script" uid="uid://dgmufx7h4gept" path="res://Scripts/Complementary/defense.gd" id="1_pss8j"]
 [ext_resource type="Texture2D" uid="uid://7f1hqgrcvmya" path="res://ArtWork/Sprites/UI - Front/defend_blank-sheet.png" id="1_vulhx"]
 [ext_resource type="PackedScene" uid="uid://ce4n56sa1esp0" path="res://Scenes/Complementary/dot.tscn" id="2_rhshk"]
 

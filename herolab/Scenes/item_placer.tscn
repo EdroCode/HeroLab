@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv443d8gl0owa"]
+[gd_scene load_steps=7 format=3 uid="uid://cv443d8gl0owa"]
 
 [ext_resource type="Texture2D" uid="uid://5jp8l28invjm" path="res://ArtWork/Sprites/UI - Front/blank.png" id="1_1gsmf"]
 [ext_resource type="Script" uid="uid://by7tfv3m01j61" path="res://Scripts/item_placer.gd" id="1_tuwl4"]
 [ext_resource type="Texture2D" uid="uid://b7h056nd2nsuc" path="res://ArtWork/Sprites/UI - Front/add.png" id="3_2x2sk"]
 [ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_00xvh"]
+[ext_resource type="Texture2D" uid="uid://cr0ebyxx248b5" path="res://ArtWork/Sprites/DuelExpansion/blank.png" id="4_e3px6"]
+[ext_resource type="Texture2D" uid="uid://q4l2aq84mhvs" path="res://ArtWork/Sprites/DuelExpansion/blank_add.png" id="5_0okv8"]
 
 [node name="ItemPlacer" type="Control"]
 layout_mode = 3
@@ -17,6 +19,8 @@ scale = Vector2(7, 7)
 script = ExtResource("1_tuwl4")
 blank = ExtResource("1_1gsmf")
 add = ExtResource("3_2x2sk")
+blank_special = ExtResource("4_e3px6")
+add_special = ExtResource("5_0okv8")
 
 [node name="Sprite" type="TextureButton" parent="."]
 layout_mode = 0

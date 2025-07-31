@@ -15,7 +15,8 @@ run/main_scene="uid://clqqauda0qetd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/fullsize=false
-config/icon="res://icon.svg"
+config/icon="uid://bmcstlghqx5mn"
+config/windows_native_icon="res://ArtWork/Sprites/Extra/icon.ico"
 
 [display]
 
@@ -23,6 +24,14 @@ window/size/viewport_width=910
 window/size/viewport_height=770
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://d0ku5pafqqw5x"
+
+[input]
+
+Click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(378, 21),"global_position":Vector2(387, 69),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 

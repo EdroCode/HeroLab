@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://clqqauda0qetd"]
 
 [ext_resource type="Texture2D" uid="uid://b7pvhlrf0ry7n" path="res://ArtWork/Sprites/Extra/EDRO_FADE.png" id="1_b226h"]
-[ext_resource type="Script" uid="uid://cmtwbh6ftxk0d" path="res://Scenes/intro.gd" id="1_geirw"]
+[ext_resource type="Script" uid="uid://cmtwbh6ftxk0d" path="res://Scripts/intro.gd" id="1_geirw"]
 [ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="2_duh1u"]
 [ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/AbacaxiPixels.ttf" id="3_alxvg"]
 [ext_resource type="Texture2D" uid="uid://8ee6uadt0uc6" path="res://ArtWork/Sprites/Extra/Software_Hardware_Mouse_Click_Input.png" id="5_hwjxs"]

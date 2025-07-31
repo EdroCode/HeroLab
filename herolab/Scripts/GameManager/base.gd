@@ -37,7 +37,7 @@ const curiosidadesPokemon = [
   "Existem Pokemon exclusivos por versao dos jogos (ex: Scyther em Red e Pinsir em Blue).",
   "Team Rocket e a organizacao vila mais famosa do anime.",
   "Ash Ketchum finalmente venceu uma liga Pokemon em Alola (Sun & Moon).",
-  "O Pokemon Jigglypuff canta e faz todos dormirem – inclusive ela mesma!",
+  "O Pokemon Jigglypuff canta e faz todos dormirem",
   "A primeira vez que Pokemon foi exibido no Brasil foi em 1999.",
   "A musica de abertura brasileira do anime ficou muito popular: 'Temos que pegar!'.",
   "Shiny Pokemon sao versoes raras com cores diferentes.",
@@ -48,8 +48,11 @@ const curiosidadesPokemon = [
 
 func _ready() -> void:
 	var i = randi_range(0, len(curiosidadesPokemon))
-	$Comment/TextEdit.placeholder_text = curiosidadesPokemon[i]
-	pass
+	$Comment/TextEdit.placeholder_text = curiosidadesPokemon[i - 1]
+	$Shop.visible = false
+	$Batalha.visible = false
+
+
 
 
 func _physics_process(delta: float) -> void:
@@ -112,3 +115,21 @@ func set_luck(number):
 func _on_arrow_button_down() -> void:
 	
 	$Comment.visible = !$Comment.visible
+
+
+
+
+func _on_money_input_text_changed() -> void:
+	var count = 0
+	var chars = []
+	
+	for i in $Inventory/Money/MoneyInput.text:
+		count += 1
+		chars.append(i)
+	
+	if count > 3:
+		var word = chars[0] + chars[1] + chars[2]
+		$Inventory/Money/MoneyInput.text = str(word)
+	
+	count = 0
+	chars.clear()

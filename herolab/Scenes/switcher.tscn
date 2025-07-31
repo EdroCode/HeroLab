@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tnu43usj6uxt"]
+
+[ext_resource type="Texture2D" uid="uid://b8rpwfda7mdqf" path="res://ArtWork/Sprites/DuelExpansion/ELEMENTO AR.png" id="1_qgrfv"]
+[ext_resource type="Script" uid="uid://bpvxvi3ctb6am" path="res://Scenes/switcher.gd" id="2_ri3ei"]
+
+[node name="Switcher" type="TextureButton"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(8, 8)
+texture_normal = ExtResource("1_qgrfv")
+script = ExtResource("2_ri3ei")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

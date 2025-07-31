@@ -12,7 +12,7 @@ var enemy_clear = false
 var sound = true
 
 func _ready() -> void:
-	
+	$"../SelectMenuPanel".visible = false
 	visible = false
 
 
@@ -42,3 +42,23 @@ func _on_clear_enemy_check_button_down() -> void:
 	else:
 		$Panel/ClearEnemyCheck.icon = enemy_off
 		
+
+var select_menu_opened = false
+
+func _on_select_mode_button_button_down() -> void:
+	select_menu_opened = !select_menu_opened
+	
+	if select_menu_opened:
+		$"../SelectMenuPanel".visible= true
+	else:
+		$"../SelectMenuPanel".visible = false
+	
+
+
+func _on_duel_button_button_down() -> void:
+	select_menu_opened = false
+	$"../SelectMenuPanel".visible = false
+	$"../Batalha".visible = true
+	$"../SidePanel".visible = false
+	$"../Shop".visible = false
+	

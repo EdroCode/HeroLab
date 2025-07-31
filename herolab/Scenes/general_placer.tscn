@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqlbmrdgyji17"]
+
+[ext_resource type="Script" uid="uid://bydr0mtgj7a67" path="res://Scenes/general_placer.gd" id="1_6tkp5"]
+[ext_resource type="Texture2D" uid="uid://cjl4i20kc1wx8" path="res://ArtWork/Sprites/DuelExpansion/basepersonagemsvazio.png" id="2_tqobj"]
+[ext_resource type="Texture2D" uid="uid://cryq8vli2hh82" path="res://ArtWork/Sprites/DuelExpansion/basepersonage,.png" id="4_tqobj"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_wn377"]
+[ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="5_svggm"]
+
+[node name="GeneralPlacer" type="Control"]
+layout_mode = 3
+anchor_right = 0.523
+anchor_bottom = 0.345
+offset_right = -203.965
+offset_bottom = -227.65
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+script = ExtResource("1_6tkp5")
+blank = ExtResource("2_tqobj")
+add = ExtResource("4_tqobj")
+
+[node name="Sprite" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -32.8571
+offset_top = -42.0
+offset_right = 33.1429
+offset_bottom = 28.0
+texture_normal = ExtResource("2_tqobj")
+
+[node name="ItemSprite" type="TextureRect" parent="." groups=["CharacterPFP"]]
+layout_mode = 0
+offset_left = -17.1429
+offset_top = -19.4286
+offset_right = 16.8571
+offset_bottom = 18.5714
+mouse_filter = 0
+stretch_mode = 3
+
+[node name="NameInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -29.0
+offset_right = 130.0
+offset_bottom = 3.0
+scale = Vector2(0.2, 0.2)
+theme = ExtResource("5_svggm")
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.303233, 0.303233, 0.303233, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+alignment = 1
+
+[node name="FileDialog" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+initial_position = 2
+size = Vector2i(353, 490)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wn377")
+pitch_scale = 15.65
+
+[connection signal="pressed" from="Sprite" to="." method="_on_sprite_pressed"]
+[connection signal="mouse_entered" from="ItemSprite" to="." method="_on_item_sprite_mouse_entered"]
+[connection signal="mouse_exited" from="ItemSprite" to="." method="_on_item_sprite_mouse_exited"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

@@ -1,8 +1,18 @@
 extends Control
 
-@export var blank = Texture2D
-@export var add = Texture2D
+@export var blank : Texture2D
+@export var add : Texture2D
+@export var blank_special : Texture2D
+@export var add_special : Texture2D
+@export var special := false 
 
+
+func _ready() -> void:
+	if special:
+		add = add_special
+		blank = blank_special
+	
+	$Sprite.texture_normal = blank
 
 func _on_sprite_mouse_entered() -> void:
 	$Sprite.texture_normal = add

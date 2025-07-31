@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6onu5xmfe1bl"]
 
 [ext_resource type="Texture2D" uid="uid://bg1vfeb0a4euj" path="res://ArtWork/Sprites/Addons/pilha.png" id="1_41142"]
-[ext_resource type="Script" uid="uid://cq6vqmhei3yan" path="res://Scenes/Complementary/light.gd" id="2_hiojo"]
+[ext_resource type="Script" uid="uid://cq6vqmhei3yan" path="res://Scripts/Complementary/light.gd" id="2_hiojo"]
 
 [node name="Light" type="TextureButton"]
 offset_right = 3.0

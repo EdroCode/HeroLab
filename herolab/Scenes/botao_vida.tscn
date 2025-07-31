@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq1apa2svjrwr"]
+
+[ext_resource type="Texture2D" uid="uid://ctknfmssu0d6n" path="res://ArtWork/Sprites/DuelExpansion/BOTÃO CURA.png" id="1_k6i7c"]
+[ext_resource type="Script" uid="uid://cvaxcardwl4e1" path="res://Scenes/botao_ataque.gd" id="2_6qpiu"]
+[ext_resource type="AudioStream" uid="uid://c3pgjcboq21sn" path="res://ArtWork/SFX/beat.wav" id="3_k6i7c"]
+
+[node name="BotaoAtaque" type="TextureButton"]
+offset_right = 16.0
+offset_bottom = 16.0
+pivot_offset = Vector2(8, 8)
+texture_normal = ExtResource("1_k6i7c")
+script = ExtResource("2_6qpiu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_k6i7c")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

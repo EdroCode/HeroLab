@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=79 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://bcj146uus5in7" path="res://Scripts/GameManager/save.gd" id="12_yv4wf"]
 [ext_resource type="Texture2D" uid="uid://bfvb74c7pgs54" path="res://ArtWork/Sprites/UI - Front/magia.png" id="13_1dbbu"]
 [ext_resource type="Script" uid="uid://bkjj7kf8s8lum" path="res://Scripts/GameManager/load.gd" id="13_h12cx"]
-[ext_resource type="Script" uid="uid://61eirhvwpqfi" path="res://Scenes/clear.gd" id="14_vpub5"]
+[ext_resource type="Script" uid="uid://61eirhvwpqfi" path="res://Scripts/clear.gd" id="14_vpub5"]
 [ext_resource type="Texture2D" uid="uid://dpcdm746bp2qw" path="res://ArtWork/Sprites/UI - Front/FUGIR.png" id="14_yv4wf"]
 [ext_resource type="Texture2D" uid="uid://bd1jvqrg3ug8k" path="res://ArtWork/Sprites/Extra/Software_Save_Button_Floppy_Disk.png" id="15_0a10q"]
 [ext_resource type="StyleBox" uid="uid://b0w4tv06d6ytp" path="res://ArtWork/Resources/new_style_box_flat.tres" id="15_ayuia"]
@@ -30,8 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://bqi14xqm0e4d1" path="res://ArtWork/Sprites/Extra/Software_Options_Settings_Cogwheel_Gear_Mechanics.png" id="22_jxcor"]
 [ext_resource type="VideoStream" uid="uid://cx2b1ohe6oeen" path="res://ArtWork/SFX/furret-pokémon.ogv" id="22_nxg6o"]
 [ext_resource type="Texture2D" uid="uid://ca11ewwphfnw3" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_2.png" id="23_ay4ti"]
-[ext_resource type="Script" uid="uid://cv8ps2lqvsevk" path="res://Scenes/settings_panel.gd" id="24_3ys61"]
-[ext_resource type="Script" uid="uid://bthi06cj6oya7" path="res://Scenes/shop.gd" id="27_oic0x"]
+[ext_resource type="Script" uid="uid://cv8ps2lqvsevk" path="res://Scripts/settings_panel.gd" id="24_3ys61"]
+[ext_resource type="Script" uid="uid://bthi06cj6oya7" path="res://Scripts/shop.gd" id="27_oic0x"]
 [ext_resource type="Texture2D" uid="uid://d58udogmie07" path="res://ArtWork/Sprites/Extra/Items/item000.png" id="28_571f2"]
 [ext_resource type="Texture2D" uid="uid://ye4wqrxvyu53" path="res://ArtWork/Sprites/Extra/Items/item001.png" id="29_107s8"]
 [ext_resource type="Texture2D" uid="uid://g1rhk6egixem" path="res://ArtWork/Sprites/Extra/Items/item002.png" id="30_qd5id"]
@@ -56,9 +56,20 @@
 [ext_resource type="Texture2D" uid="uid://c4idgywxvwrp" path="res://ArtWork/Sprites/Extra/Items/item017.png" id="45_5ebkv"]
 [ext_resource type="Texture2D" uid="uid://d2gc2vwb0khkb" path="res://ArtWork/Sprites/Extra/Items/item018.png" id="46_gtmox"]
 [ext_resource type="Texture2D" uid="uid://b42irwha3lpch" path="res://ArtWork/Sprites/Extra/Items/item019.png" id="47_4hluw"]
+[ext_resource type="Texture2D" uid="uid://crjcisuc0gpw0" path="res://ArtWork/Sprites/DuelExpansion/FundoBtl.png" id="47_bw0uk"]
+[ext_resource type="PackedScene" uid="uid://dqkgi4bcnir23" path="res://Scenes/espada.tscn" id="48_rtr1r"]
 [ext_resource type="Texture2D" uid="uid://ci4g8n2tudt2n" path="res://ArtWork/Sprites/Extra/IconeInimigo.png" id="49_0m7mc"]
+[ext_resource type="PackedScene" uid="uid://d4liewuv58aft" path="res://Scenes/shield.tscn" id="49_1tbpv"]
+[ext_resource type="Texture2D" uid="uid://dn4osv5xarop5" path="res://ArtWork/Sprites/DuelExpansion/barracomida-sheet.png" id="49_qax5u"]
 [ext_resource type="Texture2D" uid="uid://bb370esu6imjr" path="res://ArtWork/Sprites/Extra/Arrows_Roundabout_Rotation_Circle_Reload_Refresh_Loop.png" id="49_rsrcs"]
+[ext_resource type="PackedScene" uid="uid://bifypo5h5p2na" path="res://Scenes/botao_ataque.tscn" id="50_jhmdw"]
+[ext_resource type="PackedScene" uid="uid://cq1apa2svjrwr" path="res://Scenes/botao_vida.tscn" id="51_4x5p5"]
+[ext_resource type="PackedScene" uid="uid://tnu43usj6uxt" path="res://Scenes/switcher.tscn" id="52_e2jwk"]
+[ext_resource type="PackedScene" uid="uid://dqlbmrdgyji17" path="res://Scenes/general_placer.tscn" id="53_b8lel"]
+[ext_resource type="PackedScene" uid="uid://dhred64qg45qk" path="res://Scenes/health_bar.tscn" id="55_imp4g"]
 [ext_resource type="Texture2D" uid="uid://cplm304r422li" path="res://ArtWork/Sprites/Extra/IconeLoja.png" id="57_d2mfo"]
+[ext_resource type="Texture2D" uid="uid://bewo0qana2msv" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Down_South.png" id="67_wlh3x"]
+[ext_resource type="Texture2D" uid="uid://cvqt6wb4v3pfl" path="res://ArtWork/Sprites/DuelExpansion/IconePokeBatalha.png" id="68_3c8jg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fymt"]
 bg_color = Color(0, 0, 0, 0.698039)
@@ -104,12 +115,23 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk4b3"]
 bg_color = Color(0.0470588, 0.0470588, 0.0470588, 0.827451)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m7mc"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imp4g"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlh3x"]
+bg_color = Color(0, 0, 0, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c8jg"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
 [node name="Base" type="Control"]
@@ -366,6 +388,7 @@ offset_left = 14.0
 offset_top = 124.27
 offset_right = 4.16
 offset_bottom = 118.47
+special = true
 
 [node name="ItemPlacer5" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
 layout_mode = 1
@@ -373,6 +396,7 @@ offset_left = 133.0
 offset_top = 124.27
 offset_right = 123.16
 offset_bottom = 118.47
+special = true
 
 [node name="ItemPlacer6" parent="Inventory/Items" instance=ExtResource("4_jdayy")]
 layout_mode = 1
@@ -380,6 +404,7 @@ offset_left = 252.0
 offset_top = 124.27
 offset_right = 242.16
 offset_bottom = 118.47
+special = true
 
 [node name="Money" type="Control" parent="Inventory"]
 anchors_preset = 0
@@ -625,7 +650,279 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Batalha" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 453.0
+offset_top = 1.0
+offset_right = 910.0
+offset_bottom = 770.0
+
+[node name="Fundo" type="TextureRect" parent="Batalha"]
+texture_repeat = 2
+layout_mode = 0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 111.0
+scale = Vector2(7, 7)
+texture = ExtResource("47_bw0uk")
+
+[node name="Player1" type="Control" parent="Batalha"]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 76.0
+offset_right = 458.0
+offset_bottom = 319.0
+
+[node name="Bar" type="Control" parent="Batalha/Player1"]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 45.0
+offset_bottom = 65.0
+scale = Vector2(0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="Batalha/Player1/Bar"]
+layout_mode = 0
+offset_top = 233.0
+offset_right = 49.0
+offset_bottom = 255.0
+scale = Vector2(6, 6)
+texture = ExtResource("49_qax5u")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Batalha/Player1/Bar"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 49.0
+offset_bottom = 189.0
+scale = Vector2(6, 6)
+texture = ExtResource("49_qax5u")
+stretch_mode = 2
+
+[node name="SwordContainer" type="HBoxContainer" parent="Batalha/Player1/Bar"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 211.0
+offset_right = 100.0
+offset_bottom = 227.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Batalha/Player1/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada2" parent="Batalha/Player1/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada3" parent="Batalha/Player1/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada4" parent="Batalha/Player1/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada5" parent="Batalha/Player1/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="ShieldContainer" type="HBoxContainer" parent="Batalha/Player1/Bar"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 277.0
+offset_right = 100.0
+offset_bottom = 293.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Batalha/Player1/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada2" parent="Batalha/Player1/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada3" parent="Batalha/Player1/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada4" parent="Batalha/Player1/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada5" parent="Batalha/Player1/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Batalha/Player1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 295.0
+offset_top = 211.0
+offset_right = 424.0
+offset_bottom = 314.0
+
+[node name="BotaoAtaque" parent="Batalha/Player1/Control" instance=ExtResource("50_jhmdw")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 13.0
+offset_right = 44.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="BotaoAtaque2" parent="Batalha/Player1/Control" instance=ExtResource("51_4x5p5")]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 13.0
+offset_right = 101.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="Switcher" parent="Batalha/Player1/Control" instance=ExtResource("52_e2jwk")]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 75.0
+offset_right = 71.0
+offset_bottom = 91.0
+scale = Vector2(4, 4)
+
+[node name="CharacterPlacer" parent="Batalha/Player1" instance=ExtResource("53_b8lel")]
+layout_mode = 1
+offset_left = 358.0
+offset_top = 114.0
+offset_right = 154.035
+offset_bottom = 30.165
+scale = Vector2(3.2, 3.2)
+
+[node name="HealthBar" parent="Batalha/Player1" instance=ExtResource("55_imp4g")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 12.0
+offset_right = -446.0
+offset_bottom = -231.0
+scale = Vector2(5.3, 5.3)
+
+[node name="Player2" type="Control" parent="Batalha"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 427.0
+offset_right = 460.0
+offset_bottom = 670.0
+
+[node name="Bar" type="Control" parent="Batalha/Player2"]
+anchors_preset = 0
+offset_left = 444.0
+offset_top = 25.0
+offset_right = 484.0
+offset_bottom = 65.0
+scale = Vector2(-0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="Batalha/Player2/Bar"]
+layout_mode = 0
+offset_top = 233.0
+offset_right = 49.0
+offset_bottom = 255.0
+scale = Vector2(6, 6)
+texture = ExtResource("49_qax5u")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Batalha/Player2/Bar"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 49.0
+offset_bottom = 189.0
+scale = Vector2(6, 6)
+texture = ExtResource("49_qax5u")
+stretch_mode = 2
+
+[node name="SwordContainer" type="HBoxContainer" parent="Batalha/Player2/Bar"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 211.0
+offset_right = 100.0
+offset_bottom = 227.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Batalha/Player2/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada2" parent="Batalha/Player2/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada3" parent="Batalha/Player2/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada4" parent="Batalha/Player2/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="Espada5" parent="Batalha/Player2/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
+layout_mode = 2
+
+[node name="ShieldContainer" type="HBoxContainer" parent="Batalha/Player2/Bar"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 277.0
+offset_right = 100.0
+offset_bottom = 293.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Batalha/Player2/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada2" parent="Batalha/Player2/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada3" parent="Batalha/Player2/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada4" parent="Batalha/Player2/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Espada5" parent="Batalha/Player2/Bar/ShieldContainer" instance=ExtResource("49_1tbpv")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Batalha/Player2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 29.0
+offset_top = 211.0
+offset_right = 158.0
+offset_bottom = 314.0
+
+[node name="BotaoAtaque3" parent="Batalha/Player2/Control" instance=ExtResource("50_jhmdw")]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 13.0
+offset_right = 101.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="BotaoAtaque2" parent="Batalha/Player2/Control" instance=ExtResource("51_4x5p5")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 13.0
+offset_right = 44.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="Switcher" parent="Batalha/Player2/Control" instance=ExtResource("52_e2jwk")]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 75.0
+offset_right = 71.0
+offset_bottom = 91.0
+scale = Vector2(4, 4)
+
+[node name="CharacterPlacer" parent="Batalha/Player2" instance=ExtResource("53_b8lel")]
+layout_mode = 1
+offset_left = 96.0
+offset_top = 109.0
+offset_right = -107.965
+offset_bottom = 25.165
+scale = Vector2(3.2, 3.2)
+
+[node name="HealthBar" parent="Batalha/Player2" instance=ExtResource("55_imp4g")]
+layout_mode = 1
+offset_left = 181.0
+offset_top = 9.0
+offset_right = -275.0
+offset_bottom = -234.0
+scale = Vector2(5.3, 5.3)
+
 [node name="SettingsPanel" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_left = 455.0
 offset_top = 70.0
@@ -757,26 +1054,58 @@ expand_icon = true
 [node name="HeroLab" type="RichTextLabel" parent="TopPanel"]
 layout_mode = 0
 offset_left = 190.0
-offset_top = 20.0
+offset_top = 23.0
 offset_right = 347.0
-offset_bottom = 60.0
+offset_bottom = 63.0
 scale = Vector2(0.925, 0.925)
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("5_8nfiu")
 theme_override_font_sizes/normal_font_size = 32
 text = "HeroLab"
 
-[node name="ShopButton" type="Button" parent="."]
+[node name="SelectMenuPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 191.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_imp4g")
+
+[node name="ShopButton" type="Button" parent="SelectMenuPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 61.0
+offset_right = 23.0
+offset_bottom = 81.0
+scale = Vector2(2.8, 2.8)
+theme = ExtResource("4_48and")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wlh3x")
+icon = ExtResource("57_d2mfo")
+icon_alignment = 1
+
+[node name="DuelButton" type="Button" parent="SelectMenuPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 123.0
+offset_right = 59.0
+offset_bottom = 180.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3c8jg")
+icon = ExtResource("68_3c8jg")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SelectModeButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 788.0
 offset_top = 7.0
-offset_right = 808.0
-offset_bottom = 27.0
-scale = Vector2(2.8, 2.8)
+offset_right = 844.0
+offset_bottom = 63.0
 theme = ExtResource("4_48and")
-theme_override_styles/normal = SubResource("StyleBoxFlat_0m7mc")
-icon = ExtResource("57_d2mfo")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("67_wlh3x")
 icon_alignment = 1
+expand_icon = true
 
 [node name="LoadDialog" type="FileDialog" parent="."]
 title = "Open a Directory"
@@ -799,6 +1128,7 @@ stream = ExtResource("19_gsh4k")
 pitch_scale = 2.28
 
 [connection signal="button_down" from="StatsPanel/Arrow" to="." method="_on_arrow_button_down"]
+[connection signal="text_changed" from="Inventory/Money/MoneyInput" to="." method="_on_money_input_text_changed"]
 [connection signal="button_down" from="Shop/Reload" to="Shop" method="_on_reload_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/Audio" to="SettingsPanel" method="_on_audio_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck" to="SettingsPanel" method="_on_clear_enemy_check_button_down"]
@@ -810,7 +1140,9 @@ pitch_scale = 2.28
 [connection signal="mouse_entered" from="TopPanel/load" to="TopPanel/load" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TopPanel/load" to="TopPanel/load" method="_on_mouse_exited"]
 [connection signal="button_down" from="TopPanel/Settings" to="SettingsPanel" method="_on_settings_button_down"]
-[connection signal="button_down" from="ShopButton" to="Shop" method="_on_shop_button_button_down"]
+[connection signal="button_down" from="SelectMenuPanel/ShopButton" to="Shop" method="_on_shop_button_button_down"]
+[connection signal="button_down" from="SelectMenuPanel/DuelButton" to="SettingsPanel" method="_on_duel_button_button_down"]
+[connection signal="button_down" from="SelectModeButton" to="SettingsPanel" method="_on_select_mode_button_button_down"]
 [connection signal="dir_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_dir_selected"]
 [connection signal="file_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_file_selected"]
 [connection signal="dir_selected" from="SaveDialog" to="TopPanel/save" method="_on_file_dialog_dir_selected"]
