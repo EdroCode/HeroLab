@@ -12,11 +12,9 @@ var i = 0
 
 func _on_button_down() -> void:
 	i += 1
-	if i < 6:
-		texture_normal = sprites[i]
-	else:
-		i = 1
-	
+	if i >= sprites.size():
+		i = 0
+	texture_normal = sprites[i]
 
 
 func _on_mouse_entered() -> void:
@@ -25,3 +23,10 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	scale -= Vector2(0.2,0.2)
+
+func reset():
+	
+	i = 0
+	texture_normal = sprites[i]
+	
+	

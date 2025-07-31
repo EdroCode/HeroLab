@@ -11,6 +11,8 @@ var music_bus = AudioServer.get_bus_index("Master")
 var enemy_clear = false
 var sound = true
 
+var duel_clear = false
+
 func _ready() -> void:
 	$"../SelectMenuPanel".visible = false
 	visible = false
@@ -62,3 +64,13 @@ func _on_duel_button_button_down() -> void:
 	$"../SidePanel".visible = false
 	$"../Shop".visible = false
 	
+
+
+func _on_clear_enemy_check_2_button_down() -> void:
+	duel_clear = !duel_clear
+	
+	if duel_clear:
+		$Panel/ClearEnemyCheck2.icon = enemy_on
+	else:
+		$Panel/ClearEnemyCheck2.icon = enemy_off
+		

@@ -24,9 +24,13 @@ func _on_button_down() -> void:
 	
 	if $"../../SettingsPanel".enemy_clear:
 		
-		for i in $"../../SidePanel/Hearts/HBoxContainer"   .get_children():
+		for i in $"../../SidePanel/Hearts/HBoxContainer".get_children():
 			i.deselect()
 		$"../../SidePanel/EnemyPlacer".get_child(1).texture = null
+		
+	
+	if $"../../SettingsPanel".duel_clear:
+		$"../../Batalha".clear()
 		
 	
 	$"../../CharacterData/Stats/Attack".clear_points()

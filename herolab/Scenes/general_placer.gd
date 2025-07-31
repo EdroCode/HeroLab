@@ -119,3 +119,11 @@ func random_pokemon():
 	var i = randi_range(0, len(short_pokemon_names) - 1)
 	var poke_name = str(short_pokemon_names[i])
 	$NameInput.placeholder_text = poke_name
+
+func clear():
+	
+	$NameInput.text = ""
+	random_pokemon()
+	$ItemSprite.texture = null
+	
+	

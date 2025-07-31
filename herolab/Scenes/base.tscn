@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=80 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://d2gc2vwb0khkb" path="res://ArtWork/Sprites/Extra/Items/item018.png" id="46_gtmox"]
 [ext_resource type="Texture2D" uid="uid://b42irwha3lpch" path="res://ArtWork/Sprites/Extra/Items/item019.png" id="47_4hluw"]
 [ext_resource type="Texture2D" uid="uid://crjcisuc0gpw0" path="res://ArtWork/Sprites/DuelExpansion/FundoBtl.png" id="47_bw0uk"]
+[ext_resource type="Script" uid="uid://cxokiq2dj0bxy" path="res://Scenes/batalha.gd" id="47_qax5u"]
 [ext_resource type="PackedScene" uid="uid://dqkgi4bcnir23" path="res://Scenes/espada.tscn" id="48_rtr1r"]
 [ext_resource type="Texture2D" uid="uid://ci4g8n2tudt2n" path="res://ArtWork/Sprites/Extra/IconeInimigo.png" id="49_0m7mc"]
 [ext_resource type="PackedScene" uid="uid://d4liewuv58aft" path="res://Scenes/shield.tscn" id="49_1tbpv"]
@@ -656,6 +657,7 @@ offset_left = 453.0
 offset_top = 1.0
 offset_right = 910.0
 offset_bottom = 770.0
+script = ExtResource("47_qax5u")
 
 [node name="Fundo" type="TextureRect" parent="Batalha"]
 texture_repeat = 2
@@ -671,7 +673,7 @@ anchors_preset = 0
 offset_left = 2.0
 offset_top = 76.0
 offset_right = 458.0
-offset_bottom = 319.0
+offset_bottom = 408.0
 
 [node name="Bar" type="Control" parent="Batalha/Player1"]
 anchors_preset = 0
@@ -829,11 +831,11 @@ stretch_mode = 2
 
 [node name="SwordContainer" type="HBoxContainer" parent="Batalha/Player2/Bar"]
 layout_mode = 2
-offset_left = 4.0
+offset_left = 271.111
 offset_top = 211.0
-offset_right = 100.0
+offset_right = 367.111
 offset_bottom = 227.0
-scale = Vector2(2.8, 2.8)
+scale = Vector2(-2.8, 2.8)
 
 [node name="Espada" parent="Batalha/Player2/Bar/SwordContainer" instance=ExtResource("48_rtr1r")]
 layout_mode = 2
@@ -968,6 +970,18 @@ icon = ExtResource("32_mk4b3")
 icon_alignment = 1
 expand_icon = true
 
+[node name="ClearEnemyCheck2" type="Button" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 76.0
+offset_right = 287.0
+offset_bottom = 119.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = ExtResource("15_ayuia")
+icon = ExtResource("32_mk4b3")
+icon_alignment = 1
+expand_icon = true
+
 [node name="HeroLab" type="RichTextLabel" parent="SettingsPanel/Panel"]
 layout_mode = 0
 offset_left = 13.0
@@ -979,6 +993,18 @@ mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("5_8nfiu")
 theme_override_font_sizes/normal_font_size = 32
 text = ">Clear Inimigo"
+
+[node name="ClearDuelo" type="RichTextLabel" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 87.0
+offset_right = 302.0
+offset_bottom = 127.0
+scale = Vector2(0.925, 0.925)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_8nfiu")
+theme_override_font_sizes/normal_font_size = 32
+text = ">Clear Duelo"
 
 [node name="TopPanel" type="Control" parent="."]
 anchors_preset = 0
@@ -1132,6 +1158,7 @@ pitch_scale = 2.28
 [connection signal="button_down" from="Shop/Reload" to="Shop" method="_on_reload_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/Audio" to="SettingsPanel" method="_on_audio_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck" to="SettingsPanel" method="_on_clear_enemy_check_button_down"]
+[connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck2" to="SettingsPanel" method="_on_clear_enemy_check_2_button_down"]
 [connection signal="button_down" from="TopPanel/save" to="TopPanel/save" method="_on_button_down"]
 [connection signal="mouse_entered" from="TopPanel/save" to="TopPanel/save" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TopPanel/save" to="TopPanel/save" method="_on_mouse_exited"]

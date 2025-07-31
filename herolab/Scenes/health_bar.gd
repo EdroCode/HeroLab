@@ -39,7 +39,10 @@ func _on_arrow_up_2_button_down() -> void:
 func play_increase():
 	$IncreaseAudio.play()
 
-
+func reset():
+	progresso_bar.value = progresso_bar.max_value
+	
+	pass
 
 func play_decrease():
 	$DecreaseAudio.play()
