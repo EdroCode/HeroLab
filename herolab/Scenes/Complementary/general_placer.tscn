@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dqlbmrdgyji17"]
 
-[ext_resource type="Script" uid="uid://bydr0mtgj7a67" path="res://Scenes/general_placer.gd" id="1_6tkp5"]
+[ext_resource type="Script" uid="uid://bydr0mtgj7a67" path="res://Scripts/Complementary/general_placer.gd" id="1_6tkp5"]
 [ext_resource type="Texture2D" uid="uid://cjl4i20kc1wx8" path="res://ArtWork/Sprites/DuelExpansion/basepersonagemsvazio.png" id="2_tqobj"]
 [ext_resource type="Texture2D" uid="uid://cryq8vli2hh82" path="res://ArtWork/Sprites/DuelExpansion/basepersonage,.png" id="4_tqobj"]
 [ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_wn377"]

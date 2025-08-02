@@ -1,0 +1,509 @@
+[gd_scene load_steps=38 format=3 uid="uid://3c47n7hfvkwm"]
+
+[ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_b6jbv"]
+[ext_resource type="PackedScene" uid="uid://rsjoqhyv04p0" path="res://Scenes/Complementary/star.tscn" id="3_eifqw"]
+[ext_resource type="PackedScene" uid="uid://3h6vw02yddbi" path="res://Scenes/Complementary/trevo.tscn" id="4_sl1s4"]
+[ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="5_8dyn6"]
+[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/Fontes/AbacaxiPixels.ttf" id="6_dbvmy"]
+[ext_resource type="PackedScene" uid="uid://d3avmqihmaw6u" path="res://Scenes/Complementary/level.tscn" id="7_6t3il"]
+[ext_resource type="Texture2D" uid="uid://cbmcqu3ytwoln" path="res://ArtWork/Sprites/Addons/ARROW.png" id="8_ohttg"]
+[ext_resource type="PackedScene" uid="uid://d1sx8y2g5odwc" path="res://Scenes/Panels/character_data.tscn" id="9_1qoyn"]
+[ext_resource type="PackedScene" uid="uid://c1c235ag4beo6" path="res://Scenes/Panels/inventory.tscn" id="14_jytr8"]
+[ext_resource type="PackedScene" uid="uid://rvt7wqb7rxnp" path="res://Scenes/Panels/side_panel.tscn" id="14_yyuxw"]
+[ext_resource type="PackedScene" uid="uid://bay8xtpr2ajbg" path="res://Scenes/Panels/shop.tscn" id="15_uybon"]
+[ext_resource type="PackedScene" uid="uid://duxn34t7jojqx" path="res://Scenes/Panels/batalha.tscn" id="16_jytr8"]
+[ext_resource type="PackedScene" uid="uid://b6s5p5jp2no0k" path="res://Scenes/Panels/dicey.tscn" id="17_20dt7"]
+[ext_resource type="Texture2D" uid="uid://cplm304r422li" path="res://ArtWork/Sprites/Extra/IconeLoja.png" id="42_g5p11"]
+[ext_resource type="StyleBox" uid="uid://b0w4tv06d6ytp" path="res://ArtWork/Resources/new_style_box_flat.tres" id="45_hkjof"]
+[ext_resource type="Script" uid="uid://cv8ps2lqvsevk" path="res://Scripts/Panels/settings_panel.gd" id="59_eaur4"]
+[ext_resource type="Texture2D" uid="uid://cre1brl83quu6" path="res://ArtWork/Sprites/Extra/Software_Signs_Checkmark_Checkbox_Ticked_Todo.png" id="60_750wn"]
+[ext_resource type="Texture2D" uid="uid://uxcmql2d5pok" path="res://ArtWork/Sprites/Extra/Software_Signs_Maths_Multiplication_X_Crossout_Checkmark_Cancel.png" id="61_2in0a"]
+[ext_resource type="Texture2D" uid="uid://ca11ewwphfnw3" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_2.png" id="62_4juem"]
+[ext_resource type="Texture2D" uid="uid://etehr5qi0ems" path="res://ArtWork/Sprites/Extra/Media_Audio_Sound_Volume_X_Disabled.png" id="63_b143i"]
+[ext_resource type="Texture2D" uid="uid://bd1jvqrg3ug8k" path="res://ArtWork/Sprites/Extra/Software_Save_Button_Floppy_Disk.png" id="64_vsqsb"]
+[ext_resource type="Script" uid="uid://bcj146uus5in7" path="res://Scripts/GameManager/save.gd" id="65_uxpph"]
+[ext_resource type="Texture2D" uid="uid://di5atuc24ylv5" path="res://ArtWork/Sprites/Extra/Software_Trashcan_Garbage_Bin_Rubbish_Delete_Erase_1.png" id="66_m1c7v"]
+[ext_resource type="Script" uid="uid://61eirhvwpqfi" path="res://Scripts/Additional/clear.gd" id="67_5fo6e"]
+[ext_resource type="Texture2D" uid="uid://t3ljwf8o2cxl" path="res://ArtWork/Sprites/Extra/Software_Clipbaord_List_File_Copy_Paste.png" id="68_l5lg3"]
+[ext_resource type="Script" uid="uid://bkjj7kf8s8lum" path="res://Scripts/GameManager/load.gd" id="69_ptxxb"]
+[ext_resource type="Texture2D" uid="uid://bqi14xqm0e4d1" path="res://ArtWork/Sprites/Extra/Software_Options_Settings_Cogwheel_Gear_Mechanics.png" id="70_6jdcf"]
+[ext_resource type="Texture2D" uid="uid://cvqt6wb4v3pfl" path="res://ArtWork/Sprites/DuelExpansion/IconePokeBatalha.png" id="71_iq71d"]
+[ext_resource type="Texture2D" uid="uid://d33yyj7aolgj8" path="res://ArtWork/Sprites/DuelExpansion/Dice.png" id="72_4u2hg"]
+[ext_resource type="Texture2D" uid="uid://bewo0qana2msv" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Down_South.png" id="73_ouc5j"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="74_tju7e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fymt"]
+bg_color = Color(0, 0, 0, 0.698039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk4b3"]
+bg_color = Color(0.0470588, 0.0470588, 0.0470588, 0.827451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imp4g"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlh3x"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c8jg"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubd63"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="Base" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b6jbv")
+
+[node name="CharacterData" parent="." instance=ExtResource("9_1qoyn")]
+
+[node name="StatsPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="LevelInput" type="LineEdit" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 86.0
+offset_right = 469.0
+offset_bottom = 126.0
+theme = ExtResource("5_8dyn6")
+text = "01"
+max_length = 2
+flat = true
+
+[node name="NameInput" type="LineEdit" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 86.0
+offset_right = 254.0
+offset_bottom = 126.0
+theme = ExtResource("5_8dyn6")
+placeholder_text = "@ ABACAXI"
+flat = true
+
+[node name="LV" type="RichTextLabel" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 88.0
+offset_right = 357.0
+offset_bottom = 128.0
+theme_override_fonts/normal_font = ExtResource("6_dbvmy")
+theme_override_font_sizes/normal_font_size = 32
+text = "LV
+"
+
+[node name="Level" parent="StatsPanel" instance=ExtResource("7_6t3il")]
+layout_mode = 1
+offset_left = 419.0
+offset_top = 63.0
+offset_right = 379.0
+offset_bottom = 23.0
+
+[node name="Arrow" type="TextureButton" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 93.0
+offset_right = 267.0
+offset_bottom = 101.0
+rotation = -1.57079
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_ohttg")
+
+[node name="UpperBar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 454.0
+offset_bottom = 70.0
+
+[node name="StarBar" type="Control" parent="UpperBar"]
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 294.0
+offset_bottom = 72.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UpperBar/StarBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -17.0
+offset_right = 15.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="Star" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("3_eifqw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star2" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("3_eifqw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star3" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("3_eifqw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star4" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("3_eifqw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star5" parent="UpperBar/StarBar/VBoxContainer" instance=ExtResource("3_eifqw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TrevoBar" type="Control" parent="UpperBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UpperBar/TrevoBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 16.0
+offset_right = -53.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+alignment = 2
+
+[node name="trevo" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("4_sl1s4")]
+layout_mode = 2
+
+[node name="trevo2" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("4_sl1s4")]
+layout_mode = 2
+
+[node name="trevo3" parent="UpperBar/TrevoBar/VBoxContainer" instance=ExtResource("4_sl1s4")]
+layout_mode = 2
+
+[node name="Inventory" parent="." instance=ExtResource("14_jytr8")]
+
+[node name="Comment" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 139.0
+offset_right = 448.0
+offset_bottom = 511.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5fymt")
+
+[node name="TextEdit" type="TextEdit" parent="Comment"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_8dyn6")
+theme_override_font_sizes/font_size = 32
+wrap_mode = 1
+
+[node name="SidePanel" parent="." instance=ExtResource("14_yyuxw")]
+
+[node name="Shop" parent="." instance=ExtResource("15_uybon")]
+
+[node name="Batalha" parent="." instance=ExtResource("16_jytr8")]
+
+[node name="Dicey" parent="." instance=ExtResource("17_20dt7")]
+visible = false
+
+[node name="SettingsPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 455.0
+offset_top = 70.0
+offset_right = 903.0
+offset_bottom = 763.0
+script = ExtResource("59_eaur4")
+enemy_on = ExtResource("60_750wn")
+enemy_off = ExtResource("61_2in0a")
+sound_on = ExtResource("62_4juem")
+sound_off = ExtResource("63_b143i")
+
+[node name="Panel" type="Panel" parent="SettingsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mk4b3")
+
+[node name="Audio" type="Button" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 629.0
+offset_right = 426.0
+offset_bottom = 672.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("62_4juem")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ClearEnemyCheck" type="Button" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 12.0
+offset_right = 326.0
+offset_bottom = 55.0
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("61_2in0a")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ClearEnemyCheck2" type="Button" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 76.0
+offset_right = 287.0
+offset_bottom = 119.0
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("61_2in0a")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HeroLab" type="RichTextLabel" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 20.0
+offset_right = 302.0
+offset_bottom = 60.0
+scale = Vector2(0.925, 0.925)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("6_dbvmy")
+theme_override_font_sizes/normal_font_size = 32
+text = ">Clear Inimigo"
+
+[node name="ClearDuelo" type="RichTextLabel" parent="SettingsPanel/Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 87.0
+offset_right = 302.0
+offset_bottom = 127.0
+scale = Vector2(0.925, 0.925)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("6_dbvmy")
+theme_override_font_sizes/normal_font_size = 32
+text = ">Clear Duelo"
+
+[node name="TopPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 448.0
+offset_right = 910.0
+offset_bottom = 70.0
+
+[node name="ColorRect" type="ColorRect" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="save" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 52.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal_mirrored = ExtResource("45_hkjof")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("64_vsqsb")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("65_uxpph")
+
+[node name="clear" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 7.0
+offset_right = 170.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("66_m1c7v")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("67_5fo6e")
+
+[node name="load" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("68_l5lg3")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("69_ptxxb")
+
+[node name="Settings" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 7.0
+offset_right = 442.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("70_6jdcf")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HeroLab" type="RichTextLabel" parent="TopPanel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 23.0
+offset_right = 347.0
+offset_bottom = 63.0
+scale = Vector2(0.925, 0.925)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("6_dbvmy")
+theme_override_font_sizes/normal_font_size = 32
+text = "HeroLab"
+
+[node name="SelectMenuPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_imp4g")
+
+[node name="ShopButton" type="Button" parent="SelectMenuPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 61.0
+offset_right = 23.0
+offset_bottom = 81.0
+scale = Vector2(2.8, 2.8)
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wlh3x")
+icon = ExtResource("42_g5p11")
+icon_alignment = 1
+
+[node name="DuelButton" type="Button" parent="SelectMenuPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 123.0
+offset_right = 59.0
+offset_bottom = 180.0
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3c8jg")
+icon = ExtResource("71_iq71d")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DiceyButton" type="Button" parent="SelectMenuPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 183.0
+offset_right = 59.0
+offset_bottom = 240.0
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ubd63")
+icon = ExtResource("72_4u2hg")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SelectModeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 7.0
+offset_right = 844.0
+offset_bottom = 63.0
+theme = ExtResource("5_8dyn6")
+theme_override_styles/normal = ExtResource("45_hkjof")
+icon = ExtResource("73_ouc5j")
+icon_alignment = 1
+expand_icon = true
+
+[node name="LoadDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+ok_button_text = "Select Current Folder"
+dialog_hide_on_ok = true
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+ok_button_text = "Select Current Folder"
+dialog_hide_on_ok = true
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("74_tju7e")
+volume_db = -6.559
+pitch_scale = 4.0
+
+[connection signal="button_down" from="StatsPanel/Arrow" to="." method="_on_arrow_button_down"]
+[connection signal="button_down" from="SettingsPanel/Panel/Audio" to="SettingsPanel" method="_on_audio_button_down"]
+[connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck" to="SettingsPanel" method="_on_clear_enemy_check_button_down"]
+[connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck2" to="SettingsPanel" method="_on_clear_enemy_check_2_button_down"]
+[connection signal="button_down" from="TopPanel/save" to="TopPanel/save" method="_on_button_down"]
+[connection signal="mouse_entered" from="TopPanel/save" to="TopPanel/save" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TopPanel/save" to="TopPanel/save" method="_on_mouse_exited"]
+[connection signal="button_down" from="TopPanel/clear" to="TopPanel/clear" method="_on_button_down"]
+[connection signal="button_down" from="TopPanel/load" to="TopPanel/load" method="_on_button_down"]
+[connection signal="mouse_entered" from="TopPanel/load" to="TopPanel/load" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TopPanel/load" to="TopPanel/load" method="_on_mouse_exited"]
+[connection signal="button_down" from="TopPanel/Settings" to="SettingsPanel" method="_on_settings_button_down"]
+[connection signal="button_down" from="SelectMenuPanel/ShopButton" to="." method="_on_shop_button_button_down"]
+[connection signal="button_down" from="SelectMenuPanel/DuelButton" to="SettingsPanel" method="_on_duel_button_button_down"]
+[connection signal="button_down" from="SelectMenuPanel/DiceyButton" to="SettingsPanel" method="_on_dicey_button_button_down"]
+[connection signal="button_down" from="SelectModeButton" to="SettingsPanel" method="_on_select_mode_button_button_down"]
+[connection signal="dir_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_dir_selected"]
+[connection signal="file_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_file_selected"]
+[connection signal="dir_selected" from="SaveDialog" to="TopPanel/save" method="_on_file_dialog_dir_selected"]

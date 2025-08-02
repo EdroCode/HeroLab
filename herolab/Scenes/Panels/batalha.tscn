@@ -1,0 +1,285 @@
+[gd_scene load_steps=11 format=3 uid="uid://duxn34t7jojqx"]
+
+[ext_resource type="Script" uid="uid://cxokiq2dj0bxy" path="res://Scripts/Panels/batalha.gd" id="1_4gy3k"]
+[ext_resource type="Texture2D" uid="uid://crjcisuc0gpw0" path="res://ArtWork/Sprites/DuelExpansion/FundoBtl.png" id="2_8lws1"]
+[ext_resource type="Texture2D" uid="uid://dn4osv5xarop5" path="res://ArtWork/Sprites/DuelExpansion/barracomida-sheet.png" id="3_42gpo"]
+[ext_resource type="PackedScene" uid="uid://dqkgi4bcnir23" path="res://Scenes/Complementary/espada.tscn" id="4_t8yke"]
+[ext_resource type="PackedScene" uid="uid://d4liewuv58aft" path="res://Scenes/Complementary/shield.tscn" id="5_6j0yj"]
+[ext_resource type="PackedScene" uid="uid://bifypo5h5p2na" path="res://Scenes/BotoesDiversos/botao_ataque.tscn" id="6_urhif"]
+[ext_resource type="PackedScene" uid="uid://cq1apa2svjrwr" path="res://Scenes/BotoesDiversos/botao_vida.tscn" id="7_qf4n7"]
+[ext_resource type="PackedScene" uid="uid://tnu43usj6uxt" path="res://Scenes/Complementary/switcher.tscn" id="8_ltk44"]
+[ext_resource type="PackedScene" uid="uid://dqlbmrdgyji17" path="res://Scenes/Complementary/general_placer.tscn" id="9_xp0t4"]
+[ext_resource type="PackedScene" uid="uid://dhred64qg45qk" path="res://Scenes/Complementary/health_bar.tscn" id="10_5udpc"]
+
+[node name="Batalha" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 453.0
+offset_top = 1.0
+offset_right = 910.0
+offset_bottom = 770.0
+script = ExtResource("1_4gy3k")
+
+[node name="Fundo" type="TextureRect" parent="."]
+texture_repeat = 2
+layout_mode = 0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 111.0
+scale = Vector2(7, 7)
+texture = ExtResource("2_8lws1")
+
+[node name="Player1" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 76.0
+offset_right = 458.0
+offset_bottom = 408.0
+
+[node name="Bar" type="Control" parent="Player1"]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 45.0
+offset_bottom = 65.0
+scale = Vector2(0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="Player1/Bar"]
+layout_mode = 0
+offset_top = 233.0
+offset_right = 49.0
+offset_bottom = 255.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_42gpo")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Player1/Bar"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 49.0
+offset_bottom = 189.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_42gpo")
+stretch_mode = 2
+
+[node name="SwordContainer" type="HBoxContainer" parent="Player1/Bar"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 211.0
+offset_right = 100.0
+offset_bottom = 227.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Player1/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada2" parent="Player1/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada3" parent="Player1/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada4" parent="Player1/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada5" parent="Player1/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="ShieldContainer" type="HBoxContainer" parent="Player1/Bar"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 277.0
+offset_right = 100.0
+offset_bottom = 293.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Player1/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada2" parent="Player1/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada3" parent="Player1/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada4" parent="Player1/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada5" parent="Player1/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Player1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 295.0
+offset_top = 211.0
+offset_right = 424.0
+offset_bottom = 314.0
+
+[node name="BotaoAtaque" parent="Player1/Control" instance=ExtResource("6_urhif")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 13.0
+offset_right = 44.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="BotaoAtaque2" parent="Player1/Control" instance=ExtResource("7_qf4n7")]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 13.0
+offset_right = 101.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="Switcher" parent="Player1/Control" instance=ExtResource("8_ltk44")]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 75.0
+offset_right = 71.0
+offset_bottom = 91.0
+scale = Vector2(4, 4)
+
+[node name="CharacterPlacer" parent="Player1" instance=ExtResource("9_xp0t4")]
+layout_mode = 1
+offset_left = 358.0
+offset_top = 114.0
+offset_right = 154.035
+offset_bottom = 30.165
+scale = Vector2(3.2, 3.2)
+
+[node name="HealthBar" parent="Player1" instance=ExtResource("10_5udpc")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 12.0
+offset_right = -446.0
+offset_bottom = -231.0
+scale = Vector2(5.3, 5.3)
+
+[node name="Player2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 427.0
+offset_right = 460.0
+offset_bottom = 670.0
+
+[node name="Bar" type="Control" parent="Player2"]
+anchors_preset = 0
+offset_left = 444.0
+offset_top = 25.0
+offset_right = 484.0
+offset_bottom = 65.0
+scale = Vector2(-0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="Player2/Bar"]
+layout_mode = 0
+offset_top = 233.0
+offset_right = 49.0
+offset_bottom = 255.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_42gpo")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Player2/Bar"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 49.0
+offset_bottom = 189.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_42gpo")
+stretch_mode = 2
+
+[node name="SwordContainer" type="HBoxContainer" parent="Player2/Bar"]
+layout_mode = 2
+offset_left = 271.111
+offset_top = 211.0
+offset_right = 367.111
+offset_bottom = 227.0
+scale = Vector2(-2.8, 2.8)
+
+[node name="Espada" parent="Player2/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada2" parent="Player2/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada3" parent="Player2/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada4" parent="Player2/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="Espada5" parent="Player2/Bar/SwordContainer" instance=ExtResource("4_t8yke")]
+layout_mode = 2
+
+[node name="ShieldContainer" type="HBoxContainer" parent="Player2/Bar"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 277.0
+offset_right = 100.0
+offset_bottom = 293.0
+scale = Vector2(2.8, 2.8)
+
+[node name="Espada" parent="Player2/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada2" parent="Player2/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada3" parent="Player2/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada4" parent="Player2/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Espada5" parent="Player2/Bar/ShieldContainer" instance=ExtResource("5_6j0yj")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Player2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 29.0
+offset_top = 211.0
+offset_right = 158.0
+offset_bottom = 314.0
+
+[node name="BotaoAtaque3" parent="Player2/Control" instance=ExtResource("6_urhif")]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 13.0
+offset_right = 101.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="BotaoAtaque2" parent="Player2/Control" instance=ExtResource("7_qf4n7")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 13.0
+offset_right = 44.0
+offset_bottom = 29.0
+scale = Vector2(3, 3)
+
+[node name="Switcher" parent="Player2/Control" instance=ExtResource("8_ltk44")]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 75.0
+offset_right = 71.0
+offset_bottom = 91.0
+scale = Vector2(4, 4)
+
+[node name="CharacterPlacer" parent="Player2" instance=ExtResource("9_xp0t4")]
+layout_mode = 1
+offset_left = 96.0
+offset_top = 109.0
+offset_right = -107.965
+offset_bottom = 25.165
+scale = Vector2(3.2, 3.2)
+
+[node name="HealthBar" parent="Player2" instance=ExtResource("10_5udpc")]
+layout_mode = 1
+offset_left = 181.0
+offset_top = 9.0
+offset_right = -275.0
+offset_bottom = -234.0
+scale = Vector2(5.3, 5.3)

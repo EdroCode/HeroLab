@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6s5p5jp2no0k"]
+
+[ext_resource type="Script" uid="uid://stnt052epo2t" path="res://Scripts/Panels/dicey.gd" id="1_6jkb1"]
+[ext_resource type="Texture2D" uid="uid://c80k20l4ohcs3" path="res://ArtWork/Sprites/DuelExpansion/POKER.png" id="2_jqu1c"]
+[ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="3_yo1k2"]
+[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/Fontes/AbacaxiPixels.ttf" id="4_ervvt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qax5u"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.788235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyb3t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 6.0
+
+[node name="Dicey" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 453.0
+offset_bottom = 770.0
+script = ExtResource("1_6jkb1")
+red = Color(0.734944, 0, 0.147582, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qax5u")
+
+[node name="Fundo" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jqu1c")
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = 211.0
+offset_right = 6.5
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.834584, 0.834584)
+theme = ExtResource("3_yo1k2")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "15"
+placeholder_text = "100"
+alignment = 1
+max_length = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = 201.0
+offset_right = 125.5
+offset_bottom = 241.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_yo1k2")
+theme_override_font_sizes/normal_font_size = 16
+text = "Insira a Percentagem"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.5
+offset_top = 14.0
+offset_right = -35.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.61708, 2.61708)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_ervvt")
+theme_override_font_sizes/normal_font_size = 32
+text = "HIT"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="ButtonSearch" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 620.0
+offset_right = 345.0
+offset_bottom = 682.0
+theme = ExtResource("3_yo1k2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pyb3t")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[connection signal="button_down" from="Panel/ButtonSearch" to="." method="_on_button_search_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

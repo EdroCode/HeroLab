@@ -41,7 +41,7 @@ var shop_mode = false
 @export var fight_icon : Texture
 
 
-func _on_shop_button_button_down() -> void:
+func click():
 	$"../SelectMenuPanel".visible = false
 	$"../SettingsPanel".select_menu_opened = false
 	shop_mode = !shop_mode

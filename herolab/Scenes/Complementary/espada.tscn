@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://br3t8edgr3qxd" path="res://ArtWork/Sprites/DuelExpansion/ICONE ESPADA DESLIGADA.png" id="1_1mny4"]
 [ext_resource type="Texture2D" uid="uid://iarbm6cno4p0" path="res://ArtWork/Sprites/DuelExpansion/ICONE ESPADA LIGADA.png" id="1_hkoa1"]
-[ext_resource type="Script" uid="uid://duidcy6xo01t5" path="res://Scenes/espada.gd" id="3_p5i46"]
+[ext_resource type="Script" uid="uid://duidcy6xo01t5" path="res://Scripts/Complementary/espada.gd" id="3_p5i46"]
 
 [node name="Espada" type="TextureButton"]
 anchors_preset = 15

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tnu43usj6uxt"]
 
 [ext_resource type="Texture2D" uid="uid://b8rpwfda7mdqf" path="res://ArtWork/Sprites/DuelExpansion/ELEMENTO AR.png" id="1_qgrfv"]
-[ext_resource type="Script" uid="uid://bpvxvi3ctb6am" path="res://Scenes/switcher.gd" id="2_ri3ei"]
+[ext_resource type="Script" uid="uid://bpvxvi3ctb6am" path="res://Scripts/Additional/switcher.gd" id="2_ri3ei"]
 
 [node name="Switcher" type="TextureButton"]
 offset_left = 4.0

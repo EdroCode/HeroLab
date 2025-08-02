@@ -164,7 +164,20 @@ func assign_pngs_to_texture_rects(directory_path: String) -> void:
 			$"../../Inventory/Items/ItemPlacer5".get_child(1).texture = texture
 		elif files[i].get_file().to_lower() == "item8.png":
 			$"../../Inventory/Items/ItemPlacer6".get_child(1).texture = texture
-		
+		elif files[i].get_file().to_lower() == "abacamon1.png":
+			$"../../Inventory/AbacaDex/ItemPlacer".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "abacamon2.png":
+			$"../../Inventory/AbacaDex/ItemPlacer2".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "abacamon3.png":
+			$"../../Inventory/AbacaDex/ItemPlacer3".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "abacamon4.png":
+			$"../../Inventory/AbacaDex/ItemPlacer4".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "abacamon5.png":
+			$"../../Inventory/AbacaDex/ItemPlacer5".get_child(1).texture = texture
+		elif files[i].get_file().to_lower() == "abacamon6.png":
+			$"../../Inventory/AbacaDex/ItemPlacer6".get_child(1).texture = texture
+		else:
+			pass
 
 
 

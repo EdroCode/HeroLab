@@ -5,13 +5,20 @@ extends Control
 @export var blank_special : Texture2D
 @export var add_special : Texture2D
 @export var special := false 
+@export var item := true
+@export var abacamon := false
 
 
 func _ready() -> void:
+	if item:
+		$ItemSprite.add_to_group("Item")
+	
+	if abacamon:
+		$ItemSprite.add_to_group("Abacamon")
+	
 	if special:
 		add = add_special
 		blank = blank_special
-	
 	$Sprite.texture_normal = blank
 
 func _on_sprite_mouse_entered() -> void:
@@ -22,8 +29,9 @@ func _on_sprite_mouse_exited() -> void:
 
 func _on_sprite_pressed() -> void:
 	#get_parent().get_parent().get_node("FileDialog").popup()
-	$AudioStreamPlayer.play()
 	$FileDialog.popup()
+	
+
 
 
 func _on_file_dialog_file_selected(path: String) -> void:

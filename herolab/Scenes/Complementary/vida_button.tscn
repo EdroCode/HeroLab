@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4pqy3dllehb4" path="res://ArtWork/Sprites/DuelExpansion/VIDA VAZIA.png" id="1_n1kbo"]
 [ext_resource type="Texture2D" uid="uid://dq8skjlyakgyo" path="res://ArtWork/Sprites/DuelExpansion/VIDA CHEIA.png" id="1_urcpp"]
-[ext_resource type="Script" uid="uid://duidcy6xo01t5" path="res://Scenes/espada.gd" id="3_qoiu8"]
+[ext_resource type="Script" uid="uid://duidcy6xo01t5" path="res://Scripts/Complementary/espada.gd" id="3_qoiu8"]
 
 [node name="VidaButton" type="TextureButton"]
 offset_right = 8.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3avmqihmaw6u"]
 
-[ext_resource type="Script" uid="uid://c0jvo7v0q8tos" path="res://Scripts/level.gd" id="1_6phgx"]
+[ext_resource type="Script" uid="uid://c0jvo7v0q8tos" path="res://Scripts/Complementary/level.gd" id="1_6phgx"]
 [ext_resource type="Texture2D" uid="uid://c0qjtw1nsguj3" path="res://ArtWork/Sprites/Addons/battery.png" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://b6onu5xmfe1bl" path="res://Scenes/Complementary/light.tscn" id="2_k5f4k"]
 

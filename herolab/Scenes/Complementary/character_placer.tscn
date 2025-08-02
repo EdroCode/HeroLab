@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8bjpkljedqwe"]
 
 [ext_resource type="Texture2D" uid="uid://df5jt6lgx2wbi" path="res://ArtWork/Sprites/UI - Front/blank2.png" id="1_bc7r0"]
-[ext_resource type="Script" uid="uid://btdcthhe4lyb8" path="res://Scripts/character_placer.gd" id="1_gwtbq"]
+[ext_resource type="Script" uid="uid://btdcthhe4lyb8" path="res://Scripts/Complementary/character_placer.gd" id="1_gwtbq"]
 [ext_resource type="Texture2D" uid="uid://bo3coeggsy8q7" path="res://ArtWork/Sprites/UI - Front/add2.png" id="3_h2sqk"]
 [ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_8hdmk"]
 

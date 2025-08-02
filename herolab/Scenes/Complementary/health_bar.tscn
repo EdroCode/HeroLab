@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://dhred64qg45qk"]
 
-[ext_resource type="Script" uid="uid://cr6tyhqli7iqk" path="res://Scenes/health_bar.gd" id="1_4vfrx"]
+[ext_resource type="Script" uid="uid://cr6tyhqli7iqk" path="res://Scripts/Additional/health_bar.gd" id="1_4vfrx"]
 [ext_resource type="Texture2D" uid="uid://fkwmlumie8cu" path="res://ArtWork/Sprites/DuelExpansion/Barra.png" id="1_78m4n"]
 [ext_resource type="Texture2D" uid="uid://cgivfdn0ao756" path="res://ArtWork/Sprites/DuelExpansion/Vazio.png" id="1_m34ix"]
 [ext_resource type="Texture2D" uid="uid://bewo0qana2msv" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Down_South.png" id="3_qay8w"]
 [ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="3_wjrfg"]
-[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/AbacaxiPixels.ttf" id="5_ap322"]
+[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/Fontes/AbacaxiPixels.ttf" id="5_ap322"]
 [ext_resource type="Texture2D" uid="uid://cmqwxdh7o3gwr" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Up_North.png" id="6_rdj5c"]
 [ext_resource type="AudioStream" uid="uid://8e3shk3dw0gk" path="res://ArtWork/SFX/point-smooth-beep-230573.mp3" id="7_p1cfu"]
 

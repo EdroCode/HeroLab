@@ -3,7 +3,7 @@ extends Control
 
 func change_scene():
 	
-	get_tree().change_scene_to_file("res://Scenes/base.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Panels/base.tscn")
 
 func _physics_process(delta: float) -> void:
 	

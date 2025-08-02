@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://di33qd0bqg11j"
-path="res://.godot/imported/AbacaxiPixels.ttf-42dd5be21aef6343adc2d87645458889.fontdata"
+path="res://.godot/imported/AbacaxiPixels.ttf-007e1554ff861355255e0957815abcfd.fontdata"
 
 [deps]
 
-source_file="res://ArtWork/Resources/AbacaxiPixels.ttf"
-dest_files=["res://.godot/imported/AbacaxiPixels.ttf-42dd5be21aef6343adc2d87645458889.fontdata"]
+source_file="res://ArtWork/Resources/Fontes/AbacaxiPixels.ttf"
+dest_files=["res://.godot/imported/AbacaxiPixels.ttf-007e1554ff861355255e0957815abcfd.fontdata"]
 
 [params]
 
