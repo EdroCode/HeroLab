@@ -74,3 +74,19 @@ func _on_clear_enemy_check_2_button_down() -> void:
 	else:
 		$Panel/ClearEnemyCheck2.icon = enemy_off
 		
+
+var dicey_open = false
+
+
+func _on_dicey_button_button_down() -> void:
+	
+	dicey_open = !dicey_open
+	
+	if dicey_open:
+		select_menu_opened = false
+		$"../SelectMenuPanel".visible = false
+		$"../Dicey".visible = true
+	else:
+		select_menu_opened = false
+		$"../SelectMenuPanel".visible = false
+		$"../Dicey".visible = false

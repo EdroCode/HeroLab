@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://3c47n7hfvkwm"]
+[gd_scene load_steps=86 format=3 uid="uid://3c47n7hfvkwm"]
 
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_1w1q6"]
 [ext_resource type="Script" uid="uid://bavdhlrlrmc76" path="res://Scripts/GameManager/base.gd" id="1_h12cx"]
@@ -69,6 +69,9 @@
 [ext_resource type="PackedScene" uid="uid://dqlbmrdgyji17" path="res://Scenes/general_placer.tscn" id="53_b8lel"]
 [ext_resource type="PackedScene" uid="uid://dhred64qg45qk" path="res://Scenes/health_bar.tscn" id="55_imp4g"]
 [ext_resource type="Texture2D" uid="uid://cplm304r422li" path="res://ArtWork/Sprites/Extra/IconeLoja.png" id="57_d2mfo"]
+[ext_resource type="Script" uid="uid://stnt052epo2t" path="res://Scenes/dicey.gd" id="57_pyb3t"]
+[ext_resource type="Texture2D" uid="uid://d33yyj7aolgj8" path="res://ArtWork/Sprites/DuelExpansion/Dice.png" id="57_tyi7v"]
+[ext_resource type="Texture2D" uid="uid://c80k20l4ohcs3" path="res://ArtWork/Sprites/DuelExpansion/POKER.png" id="58_ubd63"]
 [ext_resource type="Texture2D" uid="uid://bewo0qana2msv" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Down_South.png" id="67_wlh3x"]
 [ext_resource type="Texture2D" uid="uid://cvqt6wb4v3pfl" path="res://ArtWork/Sprites/DuelExpansion/IconePokeBatalha.png" id="68_3c8jg"]
 
@@ -113,6 +116,14 @@ _data = {
 &"idle": SubResource("Animation_mk4b3")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qax5u"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.788235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyb3t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 6.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk4b3"]
 bg_color = Color(0.0470588, 0.0470588, 0.0470588, 0.827451)
 
@@ -128,6 +139,16 @@ border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c8jg"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubd63"]
+content_margin_left = 5.0
+content_margin_top = 3.0
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 2
 border_width_top = 2
@@ -923,6 +944,109 @@ offset_right = -275.0
 offset_bottom = -234.0
 scale = Vector2(5.3, 5.3)
 
+[node name="Dicey" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 453.0
+offset_bottom = 770.0
+script = ExtResource("57_pyb3t")
+red = Color(0.734944, 0, 0.147582, 1)
+
+[node name="Panel" type="Panel" parent="Dicey"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qax5u")
+
+[node name="Fundo" type="TextureRect" parent="Dicey/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("58_ubd63")
+
+[node name="LineEdit" type="LineEdit" parent="Dicey/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = 211.0
+offset_right = 6.5
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.834584, 0.834584)
+theme = ExtResource("4_48and")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "15"
+placeholder_text = "100"
+alignment = 1
+max_length = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dicey/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = 201.0
+offset_right = 125.5
+offset_bottom = 241.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_48and")
+theme_override_font_sizes/normal_font_size = 16
+text = "Insira a Percentagem"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Dicey/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.5
+offset_top = 14.0
+offset_right = -35.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.61708, 2.61708)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("5_8nfiu")
+theme_override_font_sizes/normal_font_size = 32
+text = "HIT"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="ButtonSearch" type="Button" parent="Dicey/Panel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 620.0
+offset_right = 345.0
+offset_bottom = 682.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pyb3t")
+
+[node name="Timer" type="Timer" parent="Dicey"]
+wait_time = 0.4
+
 [node name="SettingsPanel" type="Control" parent="."]
 visible = false
 anchors_preset = 0
@@ -1094,7 +1218,7 @@ layout_mode = 0
 offset_left = 785.0
 offset_top = 7.0
 offset_right = 847.0
-offset_bottom = 191.0
+offset_bottom = 250.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_imp4g")
 
 [node name="ShopButton" type="Button" parent="SelectMenuPanel"]
@@ -1118,6 +1242,18 @@ offset_bottom = 180.0
 theme = ExtResource("4_48and")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3c8jg")
 icon = ExtResource("68_3c8jg")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DiceyButton" type="Button" parent="SelectMenuPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 183.0
+offset_right = 59.0
+offset_bottom = 240.0
+theme = ExtResource("4_48and")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ubd63")
+icon = ExtResource("57_tyi7v")
 icon_alignment = 1
 expand_icon = true
 
@@ -1156,6 +1292,8 @@ pitch_scale = 2.28
 [connection signal="button_down" from="StatsPanel/Arrow" to="." method="_on_arrow_button_down"]
 [connection signal="text_changed" from="Inventory/Money/MoneyInput" to="." method="_on_money_input_text_changed"]
 [connection signal="button_down" from="Shop/Reload" to="Shop" method="_on_reload_button_down"]
+[connection signal="button_down" from="Dicey/Panel/ButtonSearch" to="Dicey" method="_on_button_search_button_down"]
+[connection signal="timeout" from="Dicey/Timer" to="Dicey" method="_on_timer_timeout"]
 [connection signal="button_down" from="SettingsPanel/Panel/Audio" to="SettingsPanel" method="_on_audio_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck" to="SettingsPanel" method="_on_clear_enemy_check_button_down"]
 [connection signal="button_down" from="SettingsPanel/Panel/ClearEnemyCheck2" to="SettingsPanel" method="_on_clear_enemy_check_2_button_down"]
@@ -1169,6 +1307,7 @@ pitch_scale = 2.28
 [connection signal="button_down" from="TopPanel/Settings" to="SettingsPanel" method="_on_settings_button_down"]
 [connection signal="button_down" from="SelectMenuPanel/ShopButton" to="Shop" method="_on_shop_button_button_down"]
 [connection signal="button_down" from="SelectMenuPanel/DuelButton" to="SettingsPanel" method="_on_duel_button_button_down"]
+[connection signal="button_down" from="SelectMenuPanel/DiceyButton" to="SettingsPanel" method="_on_dicey_button_button_down"]
 [connection signal="button_down" from="SelectModeButton" to="SettingsPanel" method="_on_select_mode_button_button_down"]
 [connection signal="dir_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_dir_selected"]
 [connection signal="file_selected" from="LoadDialog" to="TopPanel/load" method="_on_load_dialog_file_selected"]

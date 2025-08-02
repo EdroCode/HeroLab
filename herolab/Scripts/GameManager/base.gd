@@ -51,6 +51,8 @@ func _ready() -> void:
 	$Comment/TextEdit.placeholder_text = curiosidadesPokemon[i - 1]
 	$Shop.visible = false
 	$Batalha.visible = false
+	
+	$Dicey.visible = false
 
 
 
@@ -60,7 +62,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		$AudioStreamPlayer.play()
 
-		
 
 
 
