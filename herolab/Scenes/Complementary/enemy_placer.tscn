@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk1eblfivbv0y"]
+
+[ext_resource type="Script" uid="uid://btdcthhe4lyb8" path="res://Scripts/Complementary/character_placer.gd" id="1_nvf7j"]
+[ext_resource type="Texture2D" uid="uid://df5jt6lgx2wbi" path="res://ArtWork/Sprites/UI - Front/blank2.png" id="2_y65ag"]
+[ext_resource type="Texture2D" uid="uid://bo3coeggsy8q7" path="res://ArtWork/Sprites/UI - Front/add2.png" id="3_rugsx"]
+[ext_resource type="AudioStream" uid="uid://bamie86lmsa4y" path="res://ArtWork/SFX/classic-punch-impact-352711.mp3" id="4_lm7m3"]
+
+[node name="EnemyPlacer" type="Control"]
+layout_mode = 3
+anchor_right = 0.523
+anchor_bottom = 0.345
+offset_right = -203.965
+offset_bottom = -227.65
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+script = ExtResource("1_nvf7j")
+blank = ExtResource("2_y65ag")
+add = ExtResource("3_rugsx")
+
+[node name="Sprite" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 38.0
+texture_normal = ExtResource("2_y65ag")
+
+[node name="ItemSprite" type="TextureRect" parent="." groups=["EnemyImage"]]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 38.0
+mouse_filter = 2
+stretch_mode = 3
+
+[node name="FileDialog" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+initial_position = 2
+size = Vector2i(353, 490)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lm7m3")
+pitch_scale = 15.65
+
+[connection signal="mouse_entered" from="Sprite" to="." method="_on_sprite_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite" to="." method="_on_sprite_mouse_exited"]
+[connection signal="pressed" from="Sprite" to="." method="_on_sprite_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

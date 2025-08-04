@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyx4upos8xqwy"]
+
+[ext_resource type="Texture2D" uid="uid://b4pqy3dllehb4" path="res://ArtWork/Sprites/DuelExpansion/VIDA VAZIA.png" id="1_n1kbo"]
+[ext_resource type="Texture2D" uid="uid://dq8skjlyakgyo" path="res://ArtWork/Sprites/DuelExpansion/VIDA CHEIA.png" id="1_urcpp"]
+[ext_resource type="Script" uid="uid://duidcy6xo01t5" path="res://Scripts/Complementary/espada.gd" id="3_qoiu8"]
+
+[node name="VidaButton" type="TextureButton"]
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("1_urcpp")
+texture_pressed = ExtResource("1_n1kbo")
+script = ExtResource("3_qoiu8")
+textura_ligada = ExtResource("1_n1kbo")
+textura_desligada = ExtResource("1_urcpp")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

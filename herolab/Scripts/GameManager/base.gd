@@ -53,14 +53,18 @@ func _ready() -> void:
 	$Batalha.visible = false
 	
 	$Dicey.visible = false
+	
+	
+	
 
 
 
 
 func _physics_process(delta: float) -> void:
 	
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_just_pressed("Click"):
 		$AudioStreamPlayer.play()
+
 
 
 
@@ -118,19 +122,5 @@ func _on_arrow_button_down() -> void:
 	$Comment.visible = !$Comment.visible
 
 
-
-
-func _on_money_input_text_changed() -> void:
-	var count = 0
-	var chars = []
-	
-	for i in $Inventory/Money/MoneyInput.text:
-		count += 1
-		chars.append(i)
-	
-	if count > 3:
-		var word = chars[0] + chars[1] + chars[2]
-		$Inventory/Money/MoneyInput.text = str(word)
-	
-	count = 0
-	chars.clear()
+func _on_shop_button_button_down() -> void:
+	$Shop.click()

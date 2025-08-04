@@ -98,6 +98,7 @@ func _on_file_dialog_dir_selected(dir: String) -> void:
 func save_images(dir):
 	
 	var count = 0
+	var contador = 0
 	
 	for i in get_texture_rects_in_image_group():
 		
@@ -106,6 +107,11 @@ func save_images(dir):
 		elif i.is_in_group("Item"):
 			count += 1
 			save_texture_rect_image(i, dir + "/" + "item" + str(count) + ".png")
+		elif i.is_in_group("Abacamon"):
+			contador += 1
+			save_texture_rect_image(i, dir + "/" + "abacamon" + str(contador) + ".png")
+		else:
+			pass
 		
 
 

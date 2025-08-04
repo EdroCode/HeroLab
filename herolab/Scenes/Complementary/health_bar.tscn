@@ -1,0 +1,178 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhred64qg45qk"]
+
+[ext_resource type="Script" uid="uid://cr6tyhqli7iqk" path="res://Scripts/Additional/health_bar.gd" id="1_4vfrx"]
+[ext_resource type="Texture2D" uid="uid://fkwmlumie8cu" path="res://ArtWork/Sprites/DuelExpansion/Barra.png" id="1_78m4n"]
+[ext_resource type="Texture2D" uid="uid://cgivfdn0ao756" path="res://ArtWork/Sprites/DuelExpansion/Vazio.png" id="1_m34ix"]
+[ext_resource type="Texture2D" uid="uid://bewo0qana2msv" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Down_South.png" id="3_qay8w"]
+[ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="3_wjrfg"]
+[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/Fontes/AbacaxiPixels.ttf" id="5_ap322"]
+[ext_resource type="Texture2D" uid="uid://cmqwxdh7o3gwr" path="res://ArtWork/Sprites/Extra/Arrows_Pointer_Up_North.png" id="6_rdj5c"]
+[ext_resource type="AudioStream" uid="uid://8e3shk3dw0gk" path="res://ArtWork/SFX/point-smooth-beep-230573.mp3" id="7_p1cfu"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -859.0
+offset_bottom = -737.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4vfrx")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 34.0
+offset_bottom = 24.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 40.0
+offset_bottom = 32.0
+max_value = 30.0
+value = 30.0
+fill_mode = 4
+texture_under = ExtResource("1_m34ix")
+texture_progress = ExtResource("1_78m4n")
+
+[node name="Button1" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 39.0
+offset_right = 49.0
+offset_bottom = 26.0
+
+[node name="ArrowUp1" type="Button" parent="Button1"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 10.0
+offset_bottom = 15.0
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(5, 5)
+theme = ExtResource("3_wjrfg")
+icon = ExtResource("6_rdj5c")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ArrowDown1" type="Button" parent="Button1"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 10.0
+offset_bottom = 26.0
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(5, 5)
+theme = ExtResource("3_wjrfg")
+icon = ExtResource("3_qay8w")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button5" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 11.0
+offset_bottom = 28.0
+
+[node name="ArrowDown2" type="Button" parent="Button5"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 10.0
+offset_bottom = 26.0
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(5, 5)
+theme = ExtResource("3_wjrfg")
+icon = ExtResource("3_qay8w")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ArrowUp2" type="Button" parent="Button5"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 10.0
+offset_bottom = 15.0
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(5, 5)
+theme = ExtResource("3_wjrfg")
+icon = ExtResource("6_rdj5c")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 12.0
+offset_right = 7.0
+offset_bottom = 19.0
+color = Color(0, 0, 0, 1)
+
+[node name="5" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.6
+offset_top = 13.0
+offset_right = 14.6
+offset_bottom = 29.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/normal_font = ExtResource("5_ap322")
+text = "5"
+fit_content = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 12.0
+offset_right = 46.0
+offset_bottom = 19.0
+color = Color(0, 0, 0, 1)
+
+[node name="6" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 41.6
+offset_top = 13.0
+offset_right = 53.6
+offset_bottom = 29.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/normal_font = ExtResource("5_ap322")
+text = "1"
+fit_content = true
+
+[node name="7" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 46.0
+offset_bottom = 29.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/normal_font = ExtResource("5_ap322")
+text = "30"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="IncreaseAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_p1cfu")
+volume_db = -10.0
+pitch_scale = 1.89
+max_polyphony = 10
+
+[node name="DecreaseAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_p1cfu")
+volume_db = -10.0
+pitch_scale = 0.7
+max_polyphony = 10
+
+[connection signal="button_down" from="Button1/ArrowUp1" to="." method="_on_arrow_up_1_button_down"]
+[connection signal="mouse_entered" from="Button1/ArrowUp1" to="." method="_on_arrow_up_1_mouse_entered"]
+[connection signal="mouse_exited" from="Button1/ArrowUp1" to="." method="_on_arrow_up_1_mouse_exited"]
+[connection signal="button_down" from="Button1/ArrowDown1" to="." method="_on_arrow_down_1_button_down"]
+[connection signal="mouse_entered" from="Button1/ArrowDown1" to="." method="_on_arrow_down_1_mouse_entered"]
+[connection signal="mouse_exited" from="Button1/ArrowDown1" to="." method="_on_arrow_down_1_mouse_exited"]
+[connection signal="button_down" from="Button5/ArrowDown2" to="." method="_on_arrow_down_2_button_down"]
+[connection signal="mouse_entered" from="Button5/ArrowDown2" to="." method="_on_arrow_down_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button5/ArrowDown2" to="." method="_on_arrow_down_2_mouse_exited"]
+[connection signal="button_down" from="Button5/ArrowUp2" to="." method="_on_arrow_up_2_button_down"]
+[connection signal="mouse_entered" from="Button5/ArrowUp2" to="." method="_on_arrow_up_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button5/ArrowUp2" to="." method="_on_arrow_up_2_mouse_exited"]

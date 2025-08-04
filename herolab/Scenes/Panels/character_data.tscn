@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1sx8y2g5odwc"]
+
+[ext_resource type="PackedScene" uid="uid://cv443d8gl0owa" path="res://Scenes/Complementary/item_placer.tscn" id="1_5astl"]
+[ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_w564g"]
+[ext_resource type="PackedScene" uid="uid://b8bjpkljedqwe" path="res://Scenes/Complementary/character_placer.tscn" id="2_w564g"]
+[ext_resource type="PackedScene" uid="uid://vcx8ogn44hnl" path="res://Scenes/Complementary/attack.tscn" id="3_3lekg"]
+[ext_resource type="PackedScene" uid="uid://0u025hosng0h" path="res://Scenes/Complementary/defense.tscn" id="4_aerfg"]
+[ext_resource type="PackedScene" uid="uid://c10so7g26wvvn" path="res://Scenes/Complementary/hp.tscn" id="5_s61yb"]
+
+[node name="CharacterData" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 133.0
+offset_right = 455.0
+offset_bottom = 518.0
+
+[node name="Sheet" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.345455
+anchor_right = 0.501099
+anchor_bottom = 0.654545
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_w564g")
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemPlacer" parent="." instance=ExtResource("1_5astl")]
+layout_mode = 1
+offset_left = 301.0
+offset_top = 42.0
+offset_right = 205.07
+offset_bottom = -13.825
+
+[node name="ItemPlacer2" parent="." instance=ExtResource("1_5astl")]
+layout_mode = 1
+offset_left = 301.0
+offset_top = 168.0
+offset_right = 205.07
+offset_bottom = 112.175
+
+[node name="CharacterPlacer" parent="." instance=ExtResource("2_w564g")]
+layout_mode = 1
+offset_left = 28.0
+offset_top = 28.0
+offset_right = -175.965
+offset_bottom = -104.825
+
+[node name="Stats" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Attack" parent="Stats" instance=ExtResource("3_3lekg")]
+layout_mode = 1
+offset_left = 21.0
+offset_top = 11.0
+offset_right = -413.0
+offset_bottom = -63.0
+
+[node name="Defense" parent="Stats" instance=ExtResource("4_aerfg")]
+layout_mode = 1
+offset_left = 175.0
+offset_top = 11.0
+offset_right = -261.0
+offset_bottom = -63.0
+
+[node name="HP" parent="Stats" instance=ExtResource("5_s61yb")]
+layout_mode = 1
+offset_left = 315.0
+offset_top = 11.0
+offset_right = -123.0
+offset_bottom = -63.0

@@ -1,0 +1,260 @@
+[gd_scene load_steps=13 format=3 uid="uid://c1c235ag4beo6"]
+
+[ext_resource type="PackedScene" uid="uid://cv443d8gl0owa" path="res://Scenes/Complementary/item_placer.tscn" id="1_0s4n4"]
+[ext_resource type="Texture2D" uid="uid://bbkdumgks16j6" path="res://ArtWork/Sprites/UI - Back/inventariov2.png" id="1_63spt"]
+[ext_resource type="Script" uid="uid://brdyo7bp3vql1" path="res://Scripts/Panels/inventory.gd" id="1_x7svq"]
+[ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="3_vsgap"]
+[ext_resource type="Texture2D" uid="uid://b5d8w2wysyxd6" path="res://ArtWork/Sprites/UI - Back/money_sheet.png" id="4_h54bi"]
+[ext_resource type="Texture2D" uid="uid://br5uot7b2sj5c" path="res://ArtWork/Sprites/UI - Back/abacamons_sheet.png" id="4_sjkb3"]
+[ext_resource type="Texture2D" uid="uid://dfy32lcibj1yj" path="res://ArtWork/Sprites/Extra/Travel_Backpack_Bag_School.png" id="5_tmhki"]
+[ext_resource type="Texture2D" uid="uid://85vij2qin6l7" path="res://ArtWork/Sprites/Extra/RPG_Difficulty_5_Brutal_Monster_Demon_Boss_Skull_Shield.png" id="7_mpqgp"]
+[ext_resource type="Texture2D" uid="uid://ri1fryuaa431" path="res://ArtWork/Sprites/Extra/RPG_Loot_Bag_Money_Coins_Purse_Dollars_Bank.png" id="7_x7svq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmhki"]
+content_margin_left = 7.0
+content_margin_right = 8.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpqgp"]
+content_margin_left = 9.0
+content_margin_top = 2.0
+content_margin_right = 7.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7svq"]
+content_margin_left = 9.0
+content_margin_top = 2.0
+content_margin_right = 8.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 518.0
+offset_right = 455.0
+offset_bottom = 770.0
+script = ExtResource("1_x7svq")
+
+[node name="Items" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -2.0
+offset_right = 378.0
+offset_bottom = 250.0
+
+[node name="Fundo" type="TextureRect" parent="Items"]
+layout_mode = 0
+offset_top = -5.0
+offset_right = 75.0
+offset_bottom = 41.0
+scale = Vector2(6, 6)
+texture = ExtResource("1_63spt")
+stretch_mode = 4
+
+[node name="ItemPlacer" parent="Items" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 5.27002
+offset_right = 4.16
+offset_bottom = -0.529981
+
+[node name="ItemPlacer2" parent="Items" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 132.0
+offset_top = 5.27002
+offset_right = 122.16
+offset_bottom = -0.52998
+
+[node name="ItemPlacer3" parent="Items" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 250.0
+offset_top = 5.27002
+offset_right = 240.16
+offset_bottom = -0.52998
+
+[node name="ItemPlacer4" parent="Items" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 124.27
+offset_right = 4.16
+offset_bottom = 118.47
+
+[node name="ItemPlacer5" parent="Items" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 132.0
+offset_top = 124.27
+offset_right = 122.16
+offset_bottom = 118.47
+
+[node name="ItemPlacer6" parent="Items" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 250.0
+offset_top = 124.27
+offset_right = 240.16
+offset_bottom = 118.47
+
+[node name="AbacaDex" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -2.0
+offset_right = 378.0
+offset_bottom = 250.0
+
+[node name="Fundo" type="TextureRect" parent="AbacaDex"]
+layout_mode = 0
+offset_top = -5.0
+offset_right = 75.0
+offset_bottom = 41.0
+scale = Vector2(6, 6)
+texture = ExtResource("4_sjkb3")
+stretch_mode = 4
+
+[node name="ItemPlacer" parent="AbacaDex" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 5.27002
+offset_right = 4.16
+offset_bottom = -0.529981
+special = true
+item = false
+abacamon = true
+
+[node name="ItemPlacer2" parent="AbacaDex" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 132.0
+offset_top = 5.27002
+offset_right = 122.16
+offset_bottom = -0.52998
+special = true
+item = false
+abacamon = true
+
+[node name="ItemPlacer3" parent="AbacaDex" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 250.0
+offset_top = 5.27002
+offset_right = 240.16
+offset_bottom = -0.52998
+special = true
+item = false
+abacamon = true
+
+[node name="ItemPlacer4" parent="AbacaDex" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 124.27
+offset_right = 4.16
+offset_bottom = 118.47
+special = true
+item = false
+abacamon = true
+
+[node name="ItemPlacer5" parent="AbacaDex" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 132.0
+offset_top = 124.27
+offset_right = 122.16
+offset_bottom = 118.47
+special = true
+item = false
+abacamon = true
+
+[node name="ItemPlacer6" parent="AbacaDex" instance=ExtResource("1_0s4n4")]
+layout_mode = 1
+offset_left = 250.0
+offset_top = 124.27
+offset_right = 240.16
+offset_bottom = 118.47
+special = true
+item = false
+abacamon = true
+
+[node name="Money" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 14.0
+offset_right = 95.0
+offset_bottom = 252.0
+
+[node name="Fundo" type="TextureRect" parent="Money"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -7.0
+offset_right = 61.0
+offset_bottom = 39.0
+scale = Vector2(6, 6)
+texture = ExtResource("4_h54bi")
+stretch_mode = 4
+
+[node name="MoneyInput" type="LineEdit" parent="Money"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 88.0
+offset_right = 242.0
+offset_bottom = 126.0
+scale = Vector2(1.87925, 1.87925)
+theme = ExtResource("3_vsgap")
+theme_override_colors/font_placeholder_color = Color(0.266575, 0.266575, 0.266575, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+placeholder_text = "000"
+max_length = 3
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InventoryButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 7.0
+offset_right = 436.0
+offset_bottom = 74.0
+theme = ExtResource("3_vsgap")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tmhki")
+icon = ExtResource("5_tmhki")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AbacamonsButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 82.0
+offset_right = 436.0
+offset_bottom = 156.0
+theme = ExtResource("3_vsgap")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mpqgp")
+icon = ExtResource("7_mpqgp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MoneyButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 162.0
+offset_right = 436.0
+offset_bottom = 231.0
+theme = ExtResource("3_vsgap")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x7svq")
+icon = ExtResource("7_x7svq")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="button_down" from="Buttons/InventoryButton" to="." method="_on_inventory_button_button_down"]
+[connection signal="button_down" from="Buttons/AbacamonsButton" to="." method="_on_abacamons_button_button_down"]
+[connection signal="button_down" from="Buttons/MoneyButton" to="." method="_on_money_button_button_down"]
