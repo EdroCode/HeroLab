@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmcstlghqx5mn"
-path="res://.godot/imported/icon.png-7642a82e4e753248f656bf656c90cda7.ctex"
+uid="uid://dydan52lkratp"
+path="res://.godot/imported/oculto.png-57e77b1b38d0795fe527941aefb6c9e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtWork/Sprites/Extra/icon.png"
-dest_files=["res://.godot/imported/icon.png-7642a82e4e753248f656bf656c90cda7.ctex"]
+source_file="res://ArtWork/Sprites/Extra/Caximon/oculto.png"
+dest_files=["res://.godot/imported/oculto.png-57e77b1b38d0795fe527941aefb6c9e9.ctex"]
 
 [params]
 

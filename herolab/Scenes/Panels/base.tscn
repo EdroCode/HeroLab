@@ -125,9 +125,9 @@ offset_bottom = 23.0
 
 [node name="Arrow" type="TextureButton" parent="StatsPanel"]
 layout_mode = 0
-offset_left = 259.0
+offset_left = 258.0
 offset_top = 93.0
-offset_right = 267.0
+offset_right = 266.0
 offset_bottom = 101.0
 rotation = -1.57079
 scale = Vector2(2, 2)

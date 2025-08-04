@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3pmosx5xr561"
-path="res://.godot/imported/icon_consola.png-3613799bfe9cb831d66fdcc7f719678a.ctex"
+uid="uid://7cwn2bhsk8v3"
+path="res://.godot/imported/RollClick.png-ae61907c01171215698543202aedd3ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtWork/Sprites/Extra/icon_consola.png"
-dest_files=["res://.godot/imported/icon_consola.png-3613799bfe9cb831d66fdcc7f719678a.ctex"]
+source_file="res://ArtWork/Sprites/DuelExpansion/RollClick.png"
+dest_files=["res://.godot/imported/RollClick.png-ae61907c01171215698543202aedd3ab.ctex"]
 
 [params]
 

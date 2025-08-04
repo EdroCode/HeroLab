@@ -15,7 +15,6 @@ run/main_scene="uid://clqqauda0qetd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/fullsize=false
-config/icon="uid://bmcstlghqx5mn"
 config/windows_native_icon="res://ArtWork/Sprites/Extra/icon.ico"
 
 [display]

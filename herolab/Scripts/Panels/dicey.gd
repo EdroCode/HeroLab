@@ -1,43 +1,53 @@
 extends Control
 
-
+@export var hit_sprite : Texture2D
+@export var miss_sprite : Texture2D
 
 @export var green = Color(0.0, 0.587, 0.0)
 @export var red = Color(0.735, 0.0, 0.148)
 @export var white = Color(1.0, 1.0, 1.0)
 
-@onready var hit_text = $Panel/RichTextLabel2
 @onready var timer = $Timer
 
 var hit = false
 
 func _ready() -> void:
-	
-	hit_text.visible = false
+	$Panel/Miss_Hit.visible = false
+	pass
 
 func _on_button_search_button_down() -> void:
 	var chance = int($Panel/LineEdit.text) #80
-	
 	var resultado := randf() * 100  
 	
 	
 	print(resultado)
-	
-	if resultado < chance:
-		hit = true
-		timer.start()
-	else:
-		hit = false
-		timer.start()
+	if chance:
+		$AudioStreamPlayer.play()
+		
+		if resultado < chance:
+			hit = true
+			timer.start()
+			$AnimationPlayer.play("roll")
+			$Panel/Miss_Hit.visible = false
+			$Panel/Miss_Hit.texture = hit_sprite
+		else:
+			hit = false
+			timer.start()
+			$AnimationPlayer.play("roll")
+			$Panel/Miss_Hit.visible = false
+			$Panel/Miss_Hit.texture = miss_sprite
+			
 
 
 func _on_timer_timeout() -> void:
-	hit_text.visible = true
+	
+	$AudioStreamPlayer.stop()
+	
 	timer.stop()
+	$AnimationPlayer.stop()
 	
 	if hit:
-		hit_text.text = "HIT"
-		hit_text.add_theme_color_override("default_color", green)
+		$Panel/Miss_Hit.visible = true
+		
 	else:
-		hit_text.text = "MISS"
-		hit_text.add_theme_color_override("default_color", red)
+		$Panel/Miss_Hit.visible = true
