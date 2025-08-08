@@ -1,6 +1,6 @@
 <img width="128" height="128" alt="icon" src="https://github.com/user-attachments/assets/d612a0c4-8b3c-4180-84fc-aff35d32f1ac" />
 
-### Project Description
+### Project Description - [ITCH](https://edroz.itch.io/herolab)
 
 This project is a versatile character inventory manager and creator, built for my good friend [ABACAXI](https://www.tiktok.com/@abacaxigrelhado?lang=en), who also designed the in-game UI elements. It allows users to easily manage items, customize characters (including names, levels, and attributes), and engage in battles against enemies.
 
