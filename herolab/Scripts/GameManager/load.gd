@@ -45,6 +45,12 @@ func load_game_data(path):
 		var hp_points = int(data["hp_points"])
 		var money = int(data["money"])
 		var comment = str(data["comment"])
+		var estado 
+		
+		if data.has("estado"):
+			estado = int(data["estado"])
+		else:
+			estado = 0
 		
 		# Loading variables
 		$"../../StatsPanel/NameInput".text = c_name
@@ -60,7 +66,7 @@ func load_game_data(path):
 		hp.set_points(hp_points)
 		level_light.set_points(n_level)
 		
-		
+		$"../../CharacterData/StatusBall".load_ball(estado)
 		
 		
 

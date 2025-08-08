@@ -11,9 +11,6 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	#size -= Vector2(4,4)
 	pass
-	
-
-
 
 
 func save():
@@ -34,14 +31,18 @@ func save():
 		"hp_points" : $"../../CharacterData/Stats/HP".points,
 		"money" : int($"../../Inventory/Money/MoneyInput".text),
 		"level_lights" : int($"../../StatsPanel/Level".lights_on),
-		"comment" : str($"../../Comment/TextEdit".text)
+		"comment" : str($"../../Comment/TextEdit".text),
+		"estado" : int($"../../CharacterData/StatusBall".estado)
 	}
+	
+	#print(save_dict)
 	#print(save_dict)
 	return save_dict
 
 
 
 var save_data = null
+
 
 # Path - Selected Directory
 

@@ -51,7 +51,7 @@ func _ready() -> void:
 	$Comment/TextEdit.placeholder_text = curiosidadesPokemon[i - 1]
 	$Shop.visible = false
 	$Batalha.visible = false
-	
+	$Map.visible = false
 	$Dicey.visible = false
 	
 	

@@ -1,0 +1,280 @@
+[gd_scene load_steps=25 format=3 uid="uid://cepow3lx321ju"]
+
+[ext_resource type="Texture2D" uid="uid://bwmo3s2r4k4d5" path="res://ArtWork/Sprites/MapExpansion/0_Mapa.png" id="1_coybd"]
+[ext_resource type="Script" uid="uid://ctk3sui64d8tl" path="res://Scripts/Panels/map.gd" id="1_udrvc"]
+[ext_resource type="Texture2D" uid="uid://ec2wd62756bu" path="res://ArtWork/Sprites/MapExpansion/Caverna.png" id="2_n2l48"]
+[ext_resource type="Texture2D" uid="uid://dr1fo7d5snoak" path="res://ArtWork/Sprites/MapExpansion/Montanha.png" id="3_i8c5i"]
+[ext_resource type="Texture2D" uid="uid://bmxctjtpiaagv" path="res://ArtWork/Sprites/MapExpansion/Piramide.png" id="3_n08oc"]
+[ext_resource type="Texture2D" uid="uid://bpk2g8e7niflk" path="res://ArtWork/Sprites/MapExpansion/Caverna-sheet.png" id="4_euuco"]
+[ext_resource type="Texture2D" uid="uid://cnee5a2l7tk4i" path="res://ArtWork/Sprites/MapExpansion/Ilha.png" id="4_sm4i4"]
+[ext_resource type="Texture2D" uid="uid://ufl0uwwjkw3v" path="res://ArtWork/Sprites/MapExpansion/Piramide-sheet.png" id="5_1j4d0"]
+[ext_resource type="Texture2D" uid="uid://i575vsuwtsyu" path="res://ArtWork/Sprites/MapExpansion/Cidade_congelada.png" id="5_xdqqa"]
+[ext_resource type="Texture2D" uid="uid://jlvrervf3vd0" path="res://ArtWork/Sprites/MapExpansion/Ilha-sheet.png" id="6_hr8t7"]
+[ext_resource type="Texture2D" uid="uid://5ftlexoeubn4" path="res://ArtWork/Sprites/MapExpansion/Cidade.png" id="6_vkw70"]
+[ext_resource type="Texture2D" uid="uid://wqy4kmrqxxt8" path="res://ArtWork/Sprites/MapExpansion/Ponte.png" id="7_kpkbi"]
+[ext_resource type="Texture2D" uid="uid://fvqvxj0e3nou" path="res://ArtWork/Sprites/MapExpansion/Cidade_congelada-sheet.png" id="8_31ubq"]
+[ext_resource type="Texture2D" uid="uid://d0jdaty6bhxau" path="res://ArtWork/Sprites/MapExpansion/Ponte-sheet.png" id="9_pi4vn"]
+[ext_resource type="Texture2D" uid="uid://d1r0qggy54svy" path="res://ArtWork/Sprites/MapExpansion/Cidade-sheet.png" id="9_r260r"]
+[ext_resource type="Texture2D" uid="uid://38lfctfa8klk" path="res://ArtWork/Sprites/MapExpansion/Floresta.png" id="10_tiwop"]
+[ext_resource type="Texture2D" uid="uid://qnlncbwkhw44" path="res://ArtWork/Sprites/MapExpansion/Montanha-sheet.png" id="10_wvwot"]
+[ext_resource type="Texture2D" uid="uid://c5bje2b4hg66t" path="res://ArtWork/Sprites/MapExpansion/Floresta-sheet.png" id="11_0lbmf"]
+[ext_resource type="Texture2D" uid="uid://dfx7esrsweds7" path="res://ArtWork/Sprites/DuelExpansion/bar.png" id="19_s1pxw"]
+[ext_resource type="FontFile" uid="uid://di33qd0bqg11j" path="res://ArtWork/Resources/Fontes/AbacaxiPixels.ttf" id="20_r14ei"]
+
+[sub_resource type="Animation" id="Animation_r14ei"]
+resource_name = "Appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Barra:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(0.15932, 0.183011),
+"update": 0,
+"values": [Vector2(-7, 773), Vector2(-7, 345)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Barra:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xs7md"]
+resource_name = "Fade"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Barra:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Barra:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 345)]
+}
+
+[sub_resource type="Animation" id="Animation_vxvov"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Barra:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 780)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Barra:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxvov"]
+_data = {
+&"Appear": SubResource("Animation_r14ei"),
+&"Fade": SubResource("Animation_xs7md"),
+&"RESET": SubResource("Animation_vxvov")
+}
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 455.0
+offset_bottom = 770.0
+script = ExtResource("1_udrvc")
+
+[node name="Map" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(7, 7)
+texture = ExtResource("1_coybd")
+stretch_mode = 3
+
+[node name="Elements" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Caverna" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 91.0
+offset_right = 152.0
+offset_bottom = 147.0
+pivot_offset = Vector2(63, 28)
+texture_normal = ExtResource("2_n2l48")
+texture_pressed = ExtResource("4_euuco")
+stretch_mode = 4
+
+[node name="Piramide" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 91.0
+offset_right = 393.0
+offset_bottom = 203.0
+pivot_offset = Vector2(56, 54)
+texture_normal = ExtResource("3_n08oc")
+texture_pressed = ExtResource("5_1j4d0")
+stretch_mode = 4
+
+[node name="Ilha" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 490.0
+offset_right = 441.0
+offset_bottom = 596.0
+pivot_offset = Vector2(56, 56)
+texture_normal = ExtResource("4_sm4i4")
+texture_pressed = ExtResource("6_hr8t7")
+stretch_mode = 4
+
+[node name="Iglo" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 581.0
+offset_right = 98.0
+offset_bottom = 673.0
+pivot_offset = Vector2(43, 43)
+texture_normal = ExtResource("5_xdqqa")
+texture_pressed = ExtResource("8_31ubq")
+stretch_mode = 4
+
+[node name="Cidade" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 412.0
+offset_right = 287.0
+offset_bottom = 554.0
+pivot_offset = Vector2(70, 70)
+texture_normal = ExtResource("6_vkw70")
+texture_pressed = ExtResource("9_r260r")
+stretch_mode = 4
+
+[node name="Ponte" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 245.0
+offset_right = 336.0
+offset_bottom = 385.0
+pivot_offset = Vector2(32, 70)
+texture_normal = ExtResource("7_kpkbi")
+texture_pressed = ExtResource("9_pi4vn")
+stretch_mode = 4
+
+[node name="Montanha" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 637.0
+offset_right = 331.0
+offset_bottom = 721.0
+pivot_offset = Vector2(70, 42)
+texture_normal = ExtResource("3_i8c5i")
+texture_pressed = ExtResource("10_wvwot")
+stretch_mode = 4
+
+[node name="Floresta" type="TextureButton" parent="Elements"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 231.0
+offset_right = 150.0
+offset_bottom = 357.0
+pivot_offset = Vector2(70, 63)
+texture_normal = ExtResource("10_tiwop")
+texture_pressed = ExtResource("11_0lbmf")
+stretch_mode = 4
+
+[node name="Barra" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -7.0
+offset_top = 345.0
+offset_right = 33.0
+offset_bottom = 385.0
+scale = Vector2(1.0292, 1.0292)
+
+[node name="Bar" type="TextureButton" parent="Barra"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 24.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("19_s1pxw")
+
+[node name="TextoBarra" type="RichTextLabel" parent="Barra"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 41.0
+offset_right = 413.0
+offset_bottom = 77.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("20_r14ei")
+theme_override_font_sizes/normal_font_size = 16
+text = "Voce entrou numa Piramide - Voce encontrou um vendedor ambulante"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vxvov")
+}
+
+[connection signal="button_down" from="Elements/Caverna" to="." method="_on_caverna_button_down"]
+[connection signal="mouse_entered" from="Elements/Caverna" to="." method="_on_caverna_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Caverna" to="." method="_on_caverna_mouse_exited"]
+[connection signal="button_down" from="Elements/Piramide" to="." method="_on_piramide_button_down"]
+[connection signal="mouse_entered" from="Elements/Piramide" to="." method="_on_piramide_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Piramide" to="." method="_on_piramide_mouse_exited"]
+[connection signal="button_down" from="Elements/Ilha" to="." method="_on_ilha_button_down"]
+[connection signal="mouse_entered" from="Elements/Ilha" to="." method="_on_ilha_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Ilha" to="." method="_on_ilha_mouse_exited"]
+[connection signal="button_down" from="Elements/Iglo" to="." method="_on_iglo_button_down"]
+[connection signal="mouse_entered" from="Elements/Iglo" to="." method="_on_iglo_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Iglo" to="." method="_on_iglo_mouse_exited"]
+[connection signal="button_down" from="Elements/Cidade" to="." method="_on_cidade_button_down"]
+[connection signal="mouse_entered" from="Elements/Cidade" to="." method="_on_cidade_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Cidade" to="." method="_on_cidade_mouse_exited"]
+[connection signal="button_down" from="Elements/Ponte" to="." method="_on_ponte_button_down"]
+[connection signal="mouse_entered" from="Elements/Ponte" to="." method="_on_ponte_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Ponte" to="." method="_on_ponte_mouse_exited"]
+[connection signal="button_down" from="Elements/Montanha" to="." method="_on_montanha_button_down"]
+[connection signal="mouse_entered" from="Elements/Montanha" to="." method="_on_montanha_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Montanha" to="." method="_on_montanha_mouse_exited"]
+[connection signal="button_down" from="Elements/Floresta" to="." method="_on_floresta_button_down"]
+[connection signal="mouse_entered" from="Elements/Floresta" to="." method="_on_floresta_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/Floresta" to="." method="_on_floresta_mouse_exited"]

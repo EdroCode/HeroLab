@@ -6,6 +6,7 @@ extends Button
 func _on_button_down() -> void:
 	
 	$"../../SidePanel/EnemyPlacer/VideoStreamPlayer".visible = true
+	$"../../CharacterData/StatusBall".clear()
 	
 	var time = Timer.new()
 	add_child(time)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bay8xtpr2ajbg"]
+[gd_scene load_steps=33 format=3 uid="uid://bay8xtpr2ajbg"]
 
 [ext_resource type="Script" uid="uid://bthi06cj6oya7" path="res://Scripts/Panels/shop.gd" id="1_p1fx8"]
 [ext_resource type="Texture2D" uid="uid://d58udogmie07" path="res://ArtWork/Sprites/Extra/Items/item000.png" id="2_tqhce"]
@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://d2gc2vwb0khkb" path="res://ArtWork/Sprites/Extra/Items/item018.png" id="20_lsw77"]
 [ext_resource type="Texture2D" uid="uid://b42irwha3lpch" path="res://ArtWork/Sprites/Extra/Items/item019.png" id="21_nof0j"]
 [ext_resource type="Texture2D" uid="uid://cplm304r422li" path="res://ArtWork/Sprites/Extra/IconeLoja.png" id="22_dsxwc"]
+[ext_resource type="Texture2D" uid="uid://duvpbog2mfm4v" path="res://ArtWork/Sprites/Extra/Items/Chave_02.png" id="22_upfw8"]
+[ext_resource type="Texture2D" uid="uid://drowxkp2vtixe" path="res://ArtWork/Sprites/Extra/Items/Chave_01.png" id="23_ie8rq"]
 [ext_resource type="Texture2D" uid="uid://ci4g8n2tudt2n" path="res://ArtWork/Sprites/Extra/IconeInimigo.png" id="23_is77m"]
 [ext_resource type="Texture2D" uid="uid://cokj6vtg6dyta" path="res://ArtWork/Sprites/Extra/srrato-sheet.png" id="24_5ji7e"]
 [ext_resource type="Theme" uid="uid://eoki2u64xs1f" path="res://ArtWork/Resources/Tema.tres" id="25_mvrds"]
@@ -67,14 +69,13 @@ _data = {
 }
 
 [node name="Shop" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 454.0
 offset_right = 910.0
 offset_bottom = 770.0
 script = ExtResource("1_p1fx8")
-items = Array[Texture2D]([ExtResource("2_tqhce"), ExtResource("3_upfw8"), ExtResource("4_ie8rq"), ExtResource("5_sn7pq"), ExtResource("6_oiuar"), ExtResource("7_s6lip"), ExtResource("8_nhqj6"), ExtResource("9_nwawy"), ExtResource("10_vt60u"), ExtResource("11_hmcil"), ExtResource("12_4sybk"), ExtResource("13_csb1m"), ExtResource("14_o6j0m"), ExtResource("15_cya78"), ExtResource("16_c65vc"), ExtResource("17_ktnhl"), ExtResource("18_tvmjo"), ExtResource("19_tm1rq"), ExtResource("20_lsw77"), ExtResource("21_nof0j")])
+items = Array[Texture2D]([ExtResource("2_tqhce"), ExtResource("3_upfw8"), ExtResource("4_ie8rq"), ExtResource("5_sn7pq"), ExtResource("6_oiuar"), ExtResource("7_s6lip"), ExtResource("8_nhqj6"), ExtResource("9_nwawy"), ExtResource("10_vt60u"), ExtResource("11_hmcil"), ExtResource("12_4sybk"), ExtResource("13_csb1m"), ExtResource("14_o6j0m"), ExtResource("15_cya78"), ExtResource("16_c65vc"), ExtResource("17_ktnhl"), ExtResource("18_tvmjo"), ExtResource("19_tm1rq"), ExtResource("20_lsw77"), ExtResource("21_nof0j"), ExtResource("22_upfw8"), ExtResource("23_ie8rq")])
 shop_icon = ExtResource("22_dsxwc")
 fight_icon = ExtResource("23_is77m")
 

@@ -61,9 +61,10 @@ func _on_duel_button_button_down() -> void:
 	select_menu_opened = false
 	$"../SelectMenuPanel".visible = false
 	$"../Batalha".visible = true
+	
 	$"../SidePanel".visible = false
 	$"../Shop".visible = false
-	
+	$"../Map".visible = false
 
 
 func _on_clear_enemy_check_2_button_down() -> void:
@@ -90,3 +91,12 @@ func _on_dicey_button_button_down() -> void:
 		select_menu_opened = false
 		$"../SelectMenuPanel".visible = false
 		$"../Dicey".visible = false
+
+
+func _on_map_button_focus_entered() -> void:
+	select_menu_opened = false
+	$"../SelectMenuPanel".visible = false
+	$"../Map".visible = true
+	$"../Batalha".visible = false
+	$"../SidePanel".visible = false
+	$"../Shop".visible = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://rvt7wqb7rxnp"]
 
-[ext_resource type="Texture2D" uid="uid://b02sirdneiwy7" path="res://ArtWork/Sprites/UI - Back/empty.png" id="1_hylcu"]
+[ext_resource type="Texture2D" uid="uid://ckc2cki2dmo0e" path="res://ArtWork/Sprites/Extra/Status/fight.png" id="1_hylcu"]
 [ext_resource type="Texture2D" uid="uid://cgfh0okrb2biu" path="res://ArtWork/Sprites/UI - Front/ATACAR.png" id="2_ixs63"]
 [ext_resource type="Texture2D" uid="uid://bfvb74c7pgs54" path="res://ArtWork/Sprites/UI - Front/magia.png" id="3_wj2g8"]
 [ext_resource type="Texture2D" uid="uid://dpcdm746bp2qw" path="res://ArtWork/Sprites/UI - Front/FUGIR.png" id="4_7oig1"]
@@ -17,20 +17,23 @@ offset_right = 910.0
 offset_bottom = 770.0
 
 [node name="Blank" type="TextureRect" parent="."]
-modulate = Color(0.878431, 0.176471, 1, 1)
+modulate = Color(0.939104, 0.626176, 1, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_hylcu")
+stretch_mode = 4
 
 [node name="Options" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 7.0
+offset_left = 20.0
 offset_top = 486.0
-offset_right = 455.0
+offset_right = 468.0
 offset_bottom = 771.0
 
 [node name="Atacar" type="TextureRect" parent="Options"]
@@ -45,9 +48,9 @@ stretch_mode = 2
 
 [node name="Magia" type="TextureRect" parent="Options"]
 layout_mode = 0
-offset_left = 250.0
+offset_left = 251.0
 offset_top = 28.0
-offset_right = 308.0
+offset_right = 309.0
 offset_bottom = 68.0
 scale = Vector2(2.71028, 2.71028)
 texture = ExtResource("3_wj2g8")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtvx8rbmyuqkh"]
+
+[ext_resource type="Texture2D" uid="uid://bf6m6xwpd8hcj" path="res://ArtWork/Sprites/Extra/Status/Neutro.png" id="1_pijfk"]
+[ext_resource type="Script" uid="uid://doag7tfguiblm" path="res://Scenes/Complementary/status_ball.gd" id="2_xje7b"]
+
+[node name="StatusBall" type="TextureButton"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+pivot_offset = Vector2(20, 20)
+texture_normal = ExtResource("1_pijfk")
+stretch_mode = 4
+script = ExtResource("2_xje7b")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

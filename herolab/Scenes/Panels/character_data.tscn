@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1sx8y2g5odwc"]
+[gd_scene load_steps=8 format=3 uid="uid://d1sx8y2g5odwc"]
 
 [ext_resource type="PackedScene" uid="uid://cv443d8gl0owa" path="res://Scenes/Complementary/item_placer.tscn" id="1_5astl"]
 [ext_resource type="Texture2D" uid="uid://fiwie3ekqjry" path="res://ArtWork/Sprites/UI - Back/empty_sheet4.png" id="1_w564g"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vcx8ogn44hnl" path="res://Scenes/Complementary/attack.tscn" id="3_3lekg"]
 [ext_resource type="PackedScene" uid="uid://0u025hosng0h" path="res://Scenes/Complementary/defense.tscn" id="4_aerfg"]
 [ext_resource type="PackedScene" uid="uid://c10so7g26wvvn" path="res://Scenes/Complementary/hp.tscn" id="5_s61yb"]
+[ext_resource type="PackedScene" uid="uid://dtvx8rbmyuqkh" path="res://Scenes/Complementary/status_ball.tscn" id="7_3lekg"]
 
 [node name="CharacterData" type="Control"]
 layout_mode = 3
@@ -78,3 +79,11 @@ offset_left = 315.0
 offset_top = 11.0
 offset_right = -123.0
 offset_bottom = -63.0
+
+[node name="StatusBall" parent="." instance=ExtResource("7_3lekg")]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 20.0
+offset_right = 271.0
+offset_bottom = 60.0
+scale = Vector2(1.2, 1.2)

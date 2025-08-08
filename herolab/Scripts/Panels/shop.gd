@@ -15,14 +15,14 @@ func reroll_items():
 	var b
 	var c
 	
-	a = randi_range(0,19)
-	b = randi_range(0,19)
-	c = randi_range(0,19)
+	a = randi_range(0,items.size() - 1)
+	b = randi_range(0,items.size() - 1)
+	c = randi_range(0,items.size() - 1)
 	
 	while a == c or c == b or a == b:
-		a = randi_range(0,19)
-		b = randi_range(0,19)
-		c = randi_range(0,19)
+		a = randi_range(0,items.size() - 1)
+		b = randi_range(0,items.size() - 1)
+		c = randi_range(0,items.size() - 1)
 		
 	
 	$Item1.texture = items[a]
@@ -49,11 +49,12 @@ func click():
 	if shop_mode:
 		$"../SelectMenuPanel/ShopButton".icon = fight_icon
 		$".".visible = true
+		$"../Map".visible = false
 		$"../SidePanel".visible = false
 		$"../Batalha".visible = false
 	else:
 		$"../SelectMenuPanel/ShopButton".icon = shop_icon
 		$"../SidePanel".visible = true
-		
+		$"../Map".visible = false
 		$".".visible = false
 		
